@@ -172,9 +172,9 @@ export default function Home() {
       <div className="mt-[48px] flex gap-x-[16px]">
         <div className="w-[816px] bg-[#F8F8F8] p-[32px] rounded-[20px] relative">
           <p className="text-[#0A1A18] leading-[150%] text-[20px] tracking-[2%]">
-            It&#39;s a home for people building with heart. Whether you're coding, designing, strategizing, or just learning, 
-            there's a space for you here. It&#39;s a home for people building with heart. 
-            Whether you're coding, designing, strategizing, or just learning, there's a space for you here.
+            It&#39;s a home for people building with heart. Whether you&#39;re coding, designing, strategizing, or just learning, 
+            there&#39;s a space for you here. It&#39;s a home for people building with heart. 
+            Whether you're coding, designing, strategizing, or just learning, there&#39;s a space for you here.
           </p>
 
           <div className=" mt-[40px] flex items-center w-full gap-x-[3.5px]">
