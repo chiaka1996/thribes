@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import Community from "./components/community";
 import Activities from "./components/Activities";
 import PricingList from "./components/pricingList";
+import JoinCommunity from "./components/joinCommunity";
 
 export default function Home() {
   return (
@@ -288,7 +289,7 @@ export default function Home() {
 
       <section className="py-[120px] bg-[#E6ECEB] w-full">
          <div className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0">
-         <h1 className="text-secondaryColor tracking-[16%] text-[#107269]">Support, Partner, Collaborate</h1>
+         <h1 className="text-[16px] tracking-[16%] text-[#107269]">Support, Partner, Collaborate</h1>
           <h3 className="font-clash font-[600] my-[16px] text-[#0A1A18] text-[46px] leading-[100%] tracking-[3%] flex items-center gap-x-[12px]">
           <span>Let&#39;s Build Something Bigger</span>
           <Image src="/img/build.png" width={46} height={46} alt="thribe community testimonial" className="object-fit shrink-0" />
@@ -336,6 +337,7 @@ export default function Home() {
          </div>
 
       </section>
+      <JoinCommunity />
    </div>
   );
 }
