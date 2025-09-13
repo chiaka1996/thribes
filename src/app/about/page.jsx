@@ -1,5 +1,6 @@
 import NavigationBar from "../components/navigation2";
 import Image from "next/image";
+import TeamCard from "../components/teamCard";
 
 const About = () => {
     return (
@@ -121,6 +122,13 @@ const About = () => {
                 <Image src="/img/meet.png" width={46} height={46} alt="thribe community" className="object-center rounded-full" />
                 </h2>
                 <h3 className="text-[20px] tracking-[2%]">Our bold team holds the vision, energy, and safety of the village.</h3>
+            </div>
+            <div className="mt-[80px] flex justify-between flex-wrap">
+             <TeamCard classname="bg-[#E8F6F4]" name="Thanau Abbas" nickname="AKA Sultana"  role="The Vision Holder" img="/img/member1.png" />
+             <TeamCard classname="bg-[#FEF1E6]" name="Jesse Croffie" nickname="AKA Khing"  role="The Strategist" img="/img/member2.png" />
+            <TeamCard classname="bg-[#FFF6DF]" name="Mubarak Shittu" nickname="AKA M.O Shittu"  role="The Grounder " img="/img/member3.png" />
+            <TeamCard classname="bg-[#DFE2E6]" name="Kehinde Qudus" nickname="AKA KQ"  role="The Culture Guardian" img="/img/member4.png" />
+            
             </div>
             </section>
             </div>
