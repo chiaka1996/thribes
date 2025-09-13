@@ -39,7 +39,7 @@ const Footer = () => {
                             </div>
                             <div className="w-[32px] h-[32px] rounded-full shrink-0 bg-[#0A1A18] flex items-center justify-center">
                                  <Image 
-                                    src="/img/instagram.png"
+                                    src="/img/Instagram.png"
                                     width={11}
                                     height={11}
                                     alt="thribe community tit-tok account"
