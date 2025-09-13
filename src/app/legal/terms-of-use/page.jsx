@@ -3,8 +3,8 @@ import Link from "next/link";
 const TermsOfUse = () => {
     return(
         <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[74px] flex gap-[40px]">
-            <div className="min-w-[240px] text-secondaryColor font-clash tracking-[1%] space-y-[40px] shrink-0">
-                <div><Link href="#">Terms of Service</Link></div>
+            <div className="min-w-[240px] text-secondaryColor text-[20px] font-clash tracking-[1%] space-y-[40px] shrink-0">
+                <div><Link href="#" className="font-[600] text-[#107269] ">Terms of Service</Link></div>
                 <div><Link href="#">Privacy Policy</Link></div>
                 <div><Link href="#">Premium membership</Link></div>
                 
