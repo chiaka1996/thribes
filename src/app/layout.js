@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en"  className={`${outfit.variable} ${clashDisplay.variable} antialiased`}> 
       <body 
-        className="font-outfit">
+        className={outfit.className}>
         {children}
       </body>
     </html>

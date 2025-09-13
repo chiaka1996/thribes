@@ -1,0 +1,108 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const Footer = () => {
+    return (
+        <section className="bg-[#FFF] pt-[120px] pb-[74px] font-Outfit">
+          <div className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0">
+            <div className="flex justify-between  items-start">
+                <div>
+                    <div className="relative w-[119px] h-[36px]">
+                        <Image 
+                        src="/logo.png"
+                        alt="thribe community logo"
+                        fill
+                        className="object-center"
+                        />
+                    </div>
+                    <div className="mt-[150px]">
+                        <p>hello@thribe.com</p>
+                        <div className="flex gap-x-[14px] mt-[24px]">
+                            <div className="w-[32px] h-[32px] rounded-full shrink-0 bg-[#0A1A18] flex items-center justify-center">
+                                 <Image 
+                                    src="/img/tiktok.png"
+                                    width={11}
+                                    height={13}
+                                    alt="thribe community tit-tok account"
+                                    className="object-center"
+                                    />
+                            </div>
+                            <div className="w-[32px] h-[32px] rounded-full shrink-0 bg-[#0A1A18] flex items-center justify-center">
+                                 <Image 
+                                    src="/img/xlogo.png"
+                                    width={11}
+                                    height={13}
+                                    alt="thribe community tit-tok account"
+                                    className="object-center"
+                                    />
+                            </div>
+                            <div className="w-[32px] h-[32px] rounded-full shrink-0 bg-[#0A1A18] flex items-center justify-center">
+                                 <Image 
+                                    src="/img/instagram.png"
+                                    width={11}
+                                    height={11}
+                                    alt="thribe community tit-tok account"
+                                    className="object-center"
+                                    />
+                            </div>
+                            <div className="w-[32px] h-[32px] rounded-full shrink-0 bg-[#0A1A18] flex items-center justify-center">
+                                 <Image 
+                                    src="/img/whatssap.png"
+                                    width={13}
+                                    height={13}
+                                    alt="thribe community tit-tok account"
+                                    className="object-center"
+                                    />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%]">Home</h3>
+                    <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
+                        <Link href="#">About</Link>
+                        <Link href="#">Events</Link>
+                        <Link href="#">Pricing</Link>
+                        <Link href="#">Join the community</Link>
+                    </div>
+                </div>
+                <div>
+                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%]">SUPPORT</h3>
+                    <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
+                        <Link href="#">Buy a merch</Link>
+                        <Link href="#">Support a member</Link>
+                        <Link href="#">Partner with us</Link>
+                    </div>
+                </div>
+                <div>
+                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%]">RESOURCCES</h3>
+                    <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
+                        <Link href="#">Blog & News</Link>
+                        <Link href="#">Podcast</Link>
+                    </div>
+                </div>
+                <div>
+                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%]">LEGAL</h3>
+                    <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
+                        <Link href="#">Privacy policy</Link>
+                        <Link href="#">Terms of service</Link>
+                    </div>
+                </div>
+
+            </div>
+
+            <div className="border border-t-[#DFE2E6] border-b-0 border-l-0 border-r-0 mt-[80px] pt-[80px]">
+                <div className="flex justify-between items-center font-[400] text-[20px] leading-[150%] tracking-[3%] text-secondaryColor">
+                    <span>Copyright Ⓒ 2025 THR!BE</span>
+                    <span>By THR!BE Members </span>
+                </div>
+
+            </div>
+            </div>
+        </section>
+    )
+}
+
+export default Footer;

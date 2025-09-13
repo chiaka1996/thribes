@@ -5,6 +5,7 @@ import Community from "./components/community";
 import Activities from "./components/Activities";
 import PricingList from "./components/pricingList";
 import JoinCommunity from "./components/joinCommunity";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -338,6 +339,7 @@ export default function Home() {
 
       </section>
       <JoinCommunity />
+      <Footer />
    </div>
   );
 }

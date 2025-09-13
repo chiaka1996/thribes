@@ -9,6 +9,7 @@
   --color-primaryColor: #107269;
   --color-secondaryColor: #354764;
   --font-clash: var(--font-clash);
+  --font-clash: var(--font-outfit);
 }
 
 /* @theme inline {
