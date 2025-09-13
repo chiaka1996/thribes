@@ -87,8 +87,8 @@ const Footer = () => {
                 <div>
                     <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%]">LEGAL</h3>
                     <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
-                        <Link href="#">Privacy policy</Link>
-                        <Link href="#">Terms of service</Link>
+                        <Link href="/legal/privacy-policy">Privacy policy</Link>
+                        <Link href="/legal/terms-of-service">Terms of service</Link>
                     </div>
                 </div>
 
