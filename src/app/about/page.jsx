@@ -91,9 +91,39 @@ const About = () => {
                     <Image src="https://res.cloudinary.com/chiaka/image/upload/v1757778258/Rectangle_17083_yson1l.png" fill alt="thribe community goal" className="object-cover rounded-[20px]" />
                     </div>
                 </div>
-
-
             </section>
+
+            <div className="mt-[120px] bg-[#F5F6F7]">
+            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[80px] bg-[#F5F6F7] flex items-center gap-[80px]">
+                <h2 className="leading-[100%] text-[46px] font-clash font-[600] tracking-[3%] text-[#0A1A18] flex space-x-[12px] shrink-0">
+                <span>Our Partners</span>
+                <Image src="/img/relationship.png" width={56} height={56} alt="thribe community" className="object-fit" />
+                </h2>
+                
+                <div className="flex justify-between w-full">
+                    <Image src="/img/partner1.png" width={98} height={30} alt="thribe community" className="object-fit" /> 
+                    <Image src="/img/partner3.png" width={131} height={30} alt="thribe community" className="object-fit" /> 
+                    <Image src="/img/partner2.png" width={49} height={32} alt="thribe community" className="object-fit" /> 
+                    <Image src="/img/partner1.png" width={98} height={30} alt="thribe community" className="object-fit" /> 
+                    <Image src="/img/partner3.png" width={131} height={30} alt="thribe community" className="object-fit" /> 
+
+                </div>
+            </section>
+            </div>
+
+            {/* meet the team */}
+            <div className="bg-[#001A17]">
+            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[120px]">
+            <div className="space-y-[16px] text-[#C2C7D0] leading-[150%]">
+                <h1 className=" text-[16px] tracking-[16%] ">COMMUNITY ELDERS</h1>
+                <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[46px] leading-[100%] tracking-[3%] text-[#fff]">
+                <span>Meet The Team</span>
+                <Image src="/img/meet.png" width={46} height={46} alt="thribe community" className="object-center rounded-full" />
+                </h2>
+                <h3 className="text-[20px] tracking-[2%]">Our bold team holds the vision, energy, and safety of the village.</h3>
+            </div>
+            </section>
+            </div>
         </main>
     )
 }
