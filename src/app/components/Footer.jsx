@@ -3,7 +3,8 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <section className="bg-[#FFF] pt-[120px] pb-[74px] font-Outfit">
+        <div>
+        <section className="bg-[#FFF] pt-[120px] pb-[74px]">
           <div className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0">
             <div className="flex justify-between  items-start">
                 <div>
@@ -102,6 +103,10 @@ const Footer = () => {
             </div>
             </div>
         </section>
+          <div className="relative w-full h-[247px]">
+            <Image src="/img/footer.png" fill alt="thribe community banner" className="obejct-cover" />
+          </div>
+        </div>
     )
 }
 
