@@ -25,7 +25,7 @@ const Events = () => {
             <div className="w-full h-[12px] relative">
                 <Image src="/img/legal-nav.png" fill alt="navigation" />
             </div> 
-            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[148px] pb-[159px] tracking-[1%] space-y-[40px]">
+            <section className="bg-[#0A1A18] max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pY-[120px] tracking-[1%] space-y-[40px]">
                 upcoming events
             </section>
         </main>
