@@ -16,7 +16,7 @@ const Events = () => {
 
                 <div className="mt-[40px]">
                    <button className={`flex gap-x-[24px] items-center justify-center w-[292px] bg-[#107269] cursor-pointer shadow-[4px_4px_0px_0px_#003E39] font-[500] text-[18px] text-[#fff] h-[56px] rounded-[100px]`}>
-                    <span>See What's Comming</span>
+                    <span>See What&#39;s Comming</span>
                     <Image src="/icons/arrow-white.png" width={24} height={24} alt="thribe community" className="object-center" />
                   </button> 
                 </div>
