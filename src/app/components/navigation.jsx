@@ -18,7 +18,7 @@ const NavigationBar = () => {
              <div className="flex flex-row justify-between text-[16px] text-[#354764] font-[600] items-center space-x-[40px]">
                 <Link href="/">Home</Link>
                  <Link href="/about">About</Link>
-                  <Link href="#">Events</Link>
+                  <Link href="/events">Events</Link>
                    <Link href="#">Resources</Link>
              </div>
 
