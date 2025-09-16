@@ -1,5 +1,7 @@
 import NavigationBar from "../components/navigation";
 import Image from "next/image";
+import Button from "../components/Button";
+import Event_banner from "../components/Event_banner"
 
 const Events = () => {
     return(
@@ -25,9 +27,54 @@ const Events = () => {
             <div className="w-full h-[12px] relative">
                 <Image src="/img/legal-nav.png" fill alt="navigation" />
             </div> 
-            <section className="bg-[#0A1A18] max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pY-[120px] tracking-[1%] space-y-[40px]">
-                upcoming events
+            <main className="w-full bg-[#0A1A18]">
+            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[120px] tracking-[1%]">
+               <h3 className="text-[16px] leading-[150%] tracking-[16%] text-[#C2C7D0]">NEW!</h3>
+                <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[48px] leading-[120%] tracking-[1%] text-[#fff]">
+                <span>Upcoming Events</span>
+                <Image src="/icons/calender.png" width={46} height={46} alt="thribe community" className="object-center" />
+                </h2>
+
+                <div className="mt-[48px] ">
+                <Event_banner
+                img="/img/event-banner1.png"
+                type="Webinar"
+                description="Ever wondered why some products just click and others frustrate you? The secret is simple: they were (or weren&#39;t) made for humans."
+                background="bg-[#E8F6F4]" 
+                btnClassname="bg-[#107269] w-[190px]" 
+                 btnText="Attend Event"
+                name="Khadijah Kuku" 
+                role="UX Designer" 
+                date="Sept 19" 
+                time="2025 | 5pm WAT" 
+                venue="Google meet"
+                />
+                </div>
+
+                <div className="mt-[80px]">
+                    <h3 className="text-[16px] leading-[150%] tracking-[16%] text-[#C2C7D0]">YOU MISSED...</h3>
+                    <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[48px] leading-[120%] tracking-[1%] text-[#fff]">
+                    <span>Past Events</span>
+                    <Image src="/img/clock.png" width={46} height={46} alt="thribe community" className="object-center" />
+                    </h2>
+                    <div className="mt-[48px] ">
+                    <Event_banner
+                    img="/img/event-banner3.png"
+                    type="Webinar"
+                    description="We all know the grind: long hours in a chair, eyes glued to a screen. It's a rite of passage for techies, but it comes with a real physical toll - the dreaded stiff neck."
+                    background="bg-[#F5F6F7]" 
+                    btnClassname="bg-[#8AA6A3] w-[190px] shadow-[4px_4px_0px_0px_#64C0B7]" 
+                    btnText="View Event"
+                    name="Dr. Ebenezer G." 
+                    role="Medical Doctor" 
+                    date="August 23" 
+                    time="2025 | 6pm WAT" 
+                    venue="Google meet"
+                    />
+                </div>
+                </div>
             </section>
+            </main>
         </main>
     )
 }
