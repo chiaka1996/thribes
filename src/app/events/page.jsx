@@ -1,7 +1,8 @@
 import NavigationBar from "../components/navigation";
 import Image from "next/image";
-import Button from "../components/Button";
 import Event_banner from "../components/Event_banner"
+import JoinCommunity from "../components/joinCommunity";
+import Footer from "../components/Footer";
 
 const Events = () => {
     return(
@@ -57,7 +58,7 @@ const Events = () => {
                     <span>Past Events</span>
                     <Image src="/img/clock.png" width={46} height={46} alt="thribe community" className="object-center" />
                     </h2>
-                    <div className="mt-[48px] ">
+                    <div className="mt-[48px] space-y-[40px]">
                     <Event_banner
                     img="/img/event-banner3.png"
                     type="Webinar"
@@ -71,9 +72,66 @@ const Events = () => {
                     time="2025 | 6pm WAT" 
                     venue="Google meet"
                     />
+                     <Event_banner
+                    img="/img/event-banner7.png"
+                    type="Webinar"
+                    description="Tech isn&#39;t lawless. Know your rights - on leave, remote work, termination, and more. It&#39;s legal survival. From Offer Letters to NDAs - Don't Just Sign It. Understand It."
+                    background="bg-[#F5F6F7]" 
+                    btnClassname="bg-[#8AA6A3] w-[190px] shadow-[4px_4px_0px_0px_#64C0B7]" 
+                    btnText="View Event"
+                    name="Abayomi Olushesan" 
+                    role="Tech Lawyer" 
+                    date="August 12" 
+                    time="2025 | 6pm WAT" 
+                    venue="Google meet"
+                    />
+
+                    <Event_banner
+                    img="/img/event-banner6.png"
+                    type="Webinar"
+                    description="Struggling with what to charge? Let&#39;s talk about pricing your skills confidently, You&#39;re not what you post. You&#39;re what they find."
+                    background="bg-[#F5F6F7]" 
+                    btnClassname="bg-[#8AA6A3] w-[190px] shadow-[4px_4px_0px_0px_#64C0B7]" 
+                    btnText="View Event"
+                    name="K.S.A" 
+                    role="Tech Consultant" 
+                    date="August 5" 
+                    time="2025 | 6pm WAT" 
+                    venue="Google meet"
+                    />
+
+                     <Event_banner
+                    img="/img/event-banner5.png"
+                    type="Webinar"
+                    description="Struggling with messy frames in Figma? Learn how to use auto-layout like a pro. Clean, responsive, and stress-free designs every time."
+                    background="bg-[#F5F6F7]" 
+                    btnClassname="bg-[#8AA6A3] w-[190px] shadow-[4px_4px_0px_0px_#64C0B7]" 
+                    btnText="View Event"
+                    name="Desmond Ajimuda" 
+                    role="Senior Product Designer" 
+                    date="July 12" 
+                    time="2025 | 6pm WAT" 
+                    venue="Google meet"
+                    />
+
+                     <Event_banner
+                    img="/img/event-banner4.png"
+                    type="Webinar"
+                    description="Struggling with what to charge? Let&#39;s talk about pricing your skills confidently, setting value, and getting paid what you’re worth - no more guesswork."
+                    background="bg-[#F5F6F7]" 
+                    btnClassname="bg-[#8AA6A3] w-[190px] shadow-[4px_4px_0px_0px_#64C0B7]" 
+                    btnText="View Event"
+                    name="Desmond Ajimuda" 
+                    role="Senior Product Designer" 
+                    date="July 8" 
+                    time="2025 | 6pm WAT" 
+                    venue="Google meet"
+                    />
                 </div>
                 </div>
             </section>
+            <JoinCommunity />
+            <Footer />
             </main>
         </main>
     )
