@@ -8,11 +8,11 @@ const Events = () => {
     return(
         <main>
             <NavigationBar />
-            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[148px] pb-[159px] tracking-[1%] space-y-[40px]">
+            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[80px] md:pt-[148px] pb-[92px] md:pb-[159px] tracking-[1%] space-y-[40px]">
             <div className="max-w-[1170px]">
                 <h1 className="text-[16px] leading-[150%] tracking-[16%] text-[#087C72]">THR!BE EVENTS</h1>
-                <h2 className="font-[600] leading-[120%] text-[#0A1A18] text-[66px] tracking-[1%] font-clash">Events That Make Tech Feel Human</h2>
-                <p className="max-w-[760px] text-[20px] leading-[150%] tracking-[1%] text-secondaryColor">
+                <h2 className="font-[600] leading-[120%] text-[#0A1A18] text-[32px] md:text-[66px] tracking-[1%] font-clash mt-[16px] mb-[24px]">Events That Make Tech Feel Human</h2>
+                <p className="max-w-[760px] text-[18px] md:text-[20px] leading-[150%] tracking-[1%] text-secondaryColor">
                 Not just panels. Not just vibes. 
                 These are conversations, masterclasses, and challenges designed to bring real techies together.
                 </p>
@@ -29,20 +29,22 @@ const Events = () => {
                 <Image src="/img/legal-nav.png" fill alt="navigation" />
             </div> 
             <main className="w-full bg-[#0A1A18]">
-            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[120px] tracking-[1%]">
+            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[40px] md:py-[120px] tracking-[1%]">
                <h3 className="text-[16px] leading-[150%] tracking-[16%] text-[#C2C7D0]">NEW!</h3>
-                <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[48px] leading-[120%] tracking-[1%] text-[#fff]">
+                <h2 className="mt-[16px] flex items-center gap-x-[12px] font-clash font-[600] text-[26px] md:text-[48px] leading-[100%] md:leading-[120%] tracking-[1%] text-[#fff]">
                 <span>Upcoming Events</span>
-                <Image src="/icons/calender.png" width={46} height={46} alt="thribe community" className="object-center" />
+                <div className="relative w-[26px] md:w-[46px] h-[26px] md:h-[46px]">
+                <Image src="/icons/calender.png" fill alt="thribe community" className="object-center" />
+                </div>
                 </h2>
 
-                <div className="mt-[48px] ">
+                <div className="mt-[24px] md:mt-[48px] ">
                 <Event_banner
                 img="/img/event-banner1.png"
                 type="Webinar"
                 description="Ever wondered why some products just click and others frustrate you? The secret is simple: they were (or weren&#39;t) made for humans."
                 background="bg-[#E8F6F4]" 
-                btnClassname="bg-[#107269] w-[190px]" 
+                btnClassname="bg-[#107269]" 
                  btnText="Attend Event"
                 name="Khadijah Kuku" 
                 role="UX Designer" 
@@ -54,9 +56,11 @@ const Events = () => {
 
                 <div className="mt-[80px]">
                     <h3 className="text-[16px] leading-[150%] tracking-[16%] text-[#C2C7D0]">YOU MISSED...</h3>
-                    <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[48px] leading-[120%] tracking-[1%] text-[#fff]">
+                    <h2 className="mt-[16px] flex items-center gap-x-[12px] font-clash font-[600] text-[26px] md:text-[48px] leading-[100%] md:leading-[120%] tracking-[1%] text-[#fff]">
                     <span>Past Events</span>
-                    <Image src="/img/clock.png" width={46} height={46} alt="thribe community" className="object-center" />
+                    <div className="relative w-[26px] md:w-[46px] h-[26px] md:h-[46px]">
+                    <Image src="/img/clock.png" fill alt="thribe community" className="object-center" />
+                    </div>
                     </h2>
                     <div className="mt-[48px] space-y-[40px]">
                     <Event_banner
@@ -64,7 +68,7 @@ const Events = () => {
                     type="Webinar"
                     description="We all know the grind: long hours in a chair, eyes glued to a screen. It's a rite of passage for techies, but it comes with a real physical toll - the dreaded stiff neck."
                     background="bg-[#F5F6F7]" 
-                    btnClassname="bg-[#8AA6A3] w-[190px] shadow-[4px_4px_0px_0px_#64C0B7]" 
+                    btnClassname="bg-[#8AA6A3] shadow-[4px_4px_0px_0px_#64C0B7]" 
                     btnText="View Event"
                     name="Dr. Ebenezer G." 
                     role="Medical Doctor" 
@@ -77,7 +81,7 @@ const Events = () => {
                     type="Webinar"
                     description="Tech isn&#39;t lawless. Know your rights - on leave, remote work, termination, and more. It&#39;s legal survival. From Offer Letters to NDAs - Don't Just Sign It. Understand It."
                     background="bg-[#F5F6F7]" 
-                    btnClassname="bg-[#8AA6A3] w-[190px] shadow-[4px_4px_0px_0px_#64C0B7]" 
+                    btnClassname="bg-[#8AA6A3] shadow-[4px_4px_0px_0px_#64C0B7]" 
                     btnText="View Event"
                     name="Abayomi Olushesan" 
                     role="Tech Lawyer" 
@@ -91,7 +95,7 @@ const Events = () => {
                     type="Webinar"
                     description="Struggling with what to charge? Let&#39;s talk about pricing your skills confidently, You&#39;re not what you post. You&#39;re what they find."
                     background="bg-[#F5F6F7]" 
-                    btnClassname="bg-[#8AA6A3] w-[190px] shadow-[4px_4px_0px_0px_#64C0B7]" 
+                    btnClassname="bg-[#8AA6A3] shadow-[4px_4px_0px_0px_#64C0B7]" 
                     btnText="View Event"
                     name="K.S.A" 
                     role="Tech Consultant" 
@@ -105,7 +109,7 @@ const Events = () => {
                     type="Webinar"
                     description="Struggling with messy frames in Figma? Learn how to use auto-layout like a pro. Clean, responsive, and stress-free designs every time."
                     background="bg-[#F5F6F7]" 
-                    btnClassname="bg-[#8AA6A3] w-[190px] shadow-[4px_4px_0px_0px_#64C0B7]" 
+                    btnClassname="bg-[#8AA6A3] shadow-[4px_4px_0px_0px_#64C0B7]" 
                     btnText="View Event"
                     name="Desmond Ajimuda" 
                     role="Senior Product Designer" 
@@ -117,9 +121,9 @@ const Events = () => {
                      <Event_banner
                     img="/img/event-banner4.png"
                     type="Webinar"
-                    description="Struggling with what to charge? Let&#39;s talk about pricing your skills confidently, setting value, and getting paid what you’re worth - no more guesswork."
+                    description="Struggling with what to charge? Let&#39;s talk about pricing your skills confidently, setting value, and getting paid what you&#39;re worth - no more guesswork."
                     background="bg-[#F5F6F7]" 
-                    btnClassname="bg-[#8AA6A3] w-[190px] shadow-[4px_4px_0px_0px_#64C0B7]" 
+                    btnClassname="bg-[#8AA6A3] shadow-[4px_4px_0px_0px_#64C0B7]" 
                     btnText="View Event"
                     name="Desmond Ajimuda" 
                     role="Senior Product Designer" 
@@ -129,9 +133,9 @@ const Events = () => {
                     />
                 </div>
                 </div>
-            </section>
+            </section> 
             <JoinCommunity />
-            <Footer />
+             {/*<Footer /> */}
             </main>
         </main>
     )
