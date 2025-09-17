@@ -135,7 +135,7 @@ const Events = () => {
                 </div>
             </section> 
             <JoinCommunity />
-             {/*<Footer /> */}
+             <Footer />
             </main>
         </main>
     )
