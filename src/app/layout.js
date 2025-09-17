@@ -36,7 +36,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"  className={`${outfit.variable} ${clashDisplay.variable} font-[400] antialiased`}> 
+    <html lang="en"  className={`${outfit.variable} ${clashDisplay.variable} font-[400] antialiased text-[18px] md:text-[20px]`}> 
       <body 
         className={outfit.className}>
         {children}
