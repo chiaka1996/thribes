@@ -11,31 +11,48 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-   <div>
+   <div className="overflow-x-hidden">
     <NavigationBar />
-    <section className="text-[#354764] tracking-[1%] leading-[150%] max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[105px] text-center">
+    <section className="text-[#354764] tracking-[1%] leading-[150%] max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[80px] md:pt-[105px] text-center">
       <div className="space-y-[16px] tracking-[1%] ">
-      <h2 className="text-[18px] font-[400] ">Belong. Grow. Thrive!</h2>
-      <h1 className="font-clash font-[600] leading-[100%] text-[66px] text-[#107269] flex justify-center">
+      <h2 className="text-[16px] md:text-[18px] font-[400] ">Belong. Grow. Thrive!</h2>
+      <h1 className="font-clash font-[600] leading-[100%] text-[32px] md:text-[66px] text-[#107269] flex justify-center">
         <span>Welcome to</span>
-        <div className="relative w-[260px] h-[69px]">
+        <div className="relative w-[126px] md:w-[260px] h-[32px] md:h-[69px]">
           <Image src="/img/thribe.png" fill alt="thribe community" className="object-center" />
         </div>
          </h1>
 
-         <div className="font-[400] text-[18px] max-w-[590px] mx-auto">
+         <div className="font-[400] max-w-[590px] mx-auto">
           A vibrant, inclusive tech community for all tech builders, thinkers, and doers ready to connect, grow, and thrive together.
          </div>
 
     <div className="mt-[32px] flex justify-center">
-     <button className={`flex items-center space-x-[5px] justify-center bg-[#107269] w-[284px] cursor-pointer shadow-[4px_4px_0px_0px_#003E39] font-[500] text-[18px] text-[#fff] h-[56px] rounded-[100px]`}>
+     <button className={`flex items-center space-x-[5px] justify-center bg-[#107269] w-[244px] md:w-[284px] h-[47px] md:h-[56px] cursor-pointer shadow-[4px_4px_0px_0px_#003E39] font-[500] text-[18px] text-[#fff] rounded-[100px]`}>
         <span>Join The community</span>
         <Image src="/img/arrow-right.png" width={24} height={24} alt="thribe community" className="" />
      </button>
      </div>  
       </div>
 
-      <div className="flex justify-between space-x-[24px] items-end mt-[-56px]">
+      {/* image collage for mobile view */}
+      <div className="flex flex-col md:hidden justify-between gap-y-[16px] mt-[40px]">
+        <div className="flex gap-x-[7px] w-full">
+        <div className="relative w-[50%] h-[182px]">
+          <Image src="/img/frame1.png" fill alt="thribe community" className="object-fit" />
+        </div>    
+        <div className="relative w-[50%] h-[182px]">
+          <Image src="/img/frame3.png" fill alt="thribe community" className="object-fit" />
+        </div>
+        </div>
+        <div className="relative w-full h-[182px]">
+          <Image src="/img/frame2.png" fill alt="thribe community" className="object-fit" />
+        </div>
+      </div>
+      {/* end of image collage for mobile view */}
+
+      {/* image collage for desktop view */}
+      <div className="hidden md:flex justify-between space-x-[24px] items-end mt-[-56px]">
         <div className="relative w-[360px] h-[392px]">
           <Image src="/img/frame1.png" fill alt="thribe community" className="object-fit" />
         </div>
@@ -45,32 +62,38 @@ export default function Home() {
         <div className="relative w-[360px] h-[392px]">
           <Image src="/img/frame3.png" fill alt="thribe community" className="object-fit" />
         </div>
-
       </div>
+      {/* image collage for desktop view ends here */}
     </section>
-    <div className="relative w-full h-[122px] mt-[120px]">
-          <Image src="/img/carousel.png" fill alt="thribe community" className="object-fit" />
-        </div>
+    <div className="relative w-full h-[62px] mt-[40px] md:mt-[120px] md:hidden">
+      <Image src="/img/carousel-mobile.png" fill alt="thribe community" className="object-center" />
+    </div>
+    <div className="relative w-full h-[122px] mt-[40px] md:mt-[120px] hidden md:block">
+      <Image src="/img/carousel.png" fill alt="thribe community" className="object-center" />
+    </div>
+
 
     {/* what is thribe */}
-    <section className="py-[120px] max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 grid-container gap-[48px]">
-      <div className="max-w-[600px] space-y-[24px]">
+    <section className="py-[40px] md:py-[120px] max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 flex flex-col xl:flex-row gap-[40px]">
+      <div className="w-full xl:w-[600px] space-y-[24px]">
         <div className="font-clash font-[600]">
-          <h1 className="text-primaryColor font-[400]">WHAT IS THR!BE?</h1>
-          <h2 className="text-[46px] leading-[100%] tracking-[3%] mt-[16px]">THR!BE is more than a </h2>
-          <h2 className="leading-[120%] text-[48px] tracking-[1%] text-primaryColor flex space-x-[12px]">
+          <h1 className="text-primaryColor font-[400] text-[16px]">WHAT IS THR!BE?</h1>
+          <h2 className="text-[26px] md:text-[46px] leading-[100%] tracking-[3%] mt-[16px]">THR!BE is more than a </h2>
+          <h2 className="leading-[120%] text-[26px] md:text-[48px] tracking-[1%] text-primaryColor flex space-x-[12px] mt-[8px]">
             <span>Tech Community</span>
-            <Image src="/img/community.png" width={66} height={46} alt="thribe community" className="object-fit" />
+            <div className="relative w-[32px] md:w-[66px] h-[22px] md:h-[46px]">
+            <Image src="/img/community.png" fill alt="thribe community" className="object-fit" />
+            </div>
             </h2>
         </div>
-        <div className="mt-[24px] text-[20px] tracking-[2%] text-secondaryColor">
+        <div className="mt-[24px] tracking-[2%] text-secondaryColor">
           A human-first tech community built on connection, growth and collaboration. This is not just another tech group. 
           This is your THR!BE - The tribe that thrives.
         </div>
-        <Button name="Join The tribe Now" classname="w-[236px] bg-primaryColor" />
+        <Button name="Join The tribe Now" classname="w-[196px] md:w-[236px] h-[47px] md:h-[56px] bg-primaryColor" />
       </div>
 
-      <div className="max-w-[600px]">
+      <div className="w-full xl:w-[600px]">
         <div className="w-full grid-container gap-[40px]">
          <Community
           number="01"
@@ -97,26 +120,26 @@ export default function Home() {
     </section>
 
     {/* why TRibe */}
-    <section className="py-[120px] w-full bg-[#FEF1E6]">
+    <section className="py-[40px] md:py-[120px] w-full bg-[#FEF1E6]">
       <div className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0">
         <div className="space-y-[16px]">
           <h2 className="text-[16px] font-[400] leading-[150%] tracking-[16%] text-[#E36A02]">WHY THR!BE?</h2>
-          <h1 className="font-clash text-[46px] leading-[100%] font-[600] tracking-[3%]">Why <span className="text-[#E36A02]">THR!BE</span> Exists</h1>
+          <h1 className="font-clash text-[26px] md:text-[46px] leading-[100%] font-[600] tracking-[3%]">Why <span className="text-[#E36A02]">THR!BE</span> Exists</h1>
         </div>
 
-        <div className="flex mt-[48px] justify-between">
-         <div className="relative w-[711px] h-[360px]">
+        <div className="flex flex-col md:flex-row mt-[24px] md:mt-[48px] justify-between md:gap-x-[24px] gap-y-[24px] md:gap-y-0">
+         <div className="relative w-[343px] md:w-[711px] h-[173px] md:h-[360px]">
           <Image src="/img/vid.png" fill alt="thribe community" className="object-center" />
         </div>
-        <div className="w-[513px] text-[20px] leading-[150%] tracking-[2%] text-[#52514D]">
+        <div className="w-full md:w-[513px] leading-[150%] tracking-[2%] text-[#52514D]">
           <p>
             Tech can feel cold, competitive, and isolating. We&#39;re here to change that. THR!BE was built for humans first, not hustle culture. We mix learning with laughter, growth with community, and celebration with impact. We’re building loudly, not quietly.
             We&#39;re here to grow together. We believe in showing up fully, flaws and all.
           </p>
-          <p className="mt-[60px] mb-[24px]">
+          <p className=" mt-[30px] md:mt-[60px] mb-[24px]">
             This is not just another tech group. This is your tribe.
           </p>
-          <Button name="Join THR!BE" classname="w-[236px] bg-[#B15301] w-[184px] shadow-[4px_4px_0px_0px_#693101]" />
+          <Button name="Join THR!BE" classname="bg-[#B15301] w-[144px] md:w-[184px] h-[47px] md:h-[56px] shadow-[4px_4px_0px_0px_#693101]" />
         </div>
         </div>
       </div>
