@@ -2,15 +2,15 @@ import Link from "next/link";
 
 const Privacy = () => {
     return(
-        <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[74px] flex gap-[40px]">
-            <div className="min-w-[240px] text-secondaryColor text-[20px] font-clash tracking-[1%] space-y-[40px] shrink-0">
+        <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[34px] sm:pt-[74px] flex flex-col md:flex-row gap-[40px]">
+            <div className="min-w-full md:min-w-[240px] text-secondaryColor font-clash tracking-[1%] space-y-[24px] sm:space-y-[40px] sm:shrink-0">
                 <div><Link href="/legal/terms-of-use">Terms of Service</Link></div>
                 <div><Link href="/legal/privacy-policy" className="font-[600] text-[#107269] ">Privacy Policy</Link></div>
                 <div><Link href="/legal/membership">Premium membership</Link></div>
                 
             </div>
  
-            <div className="w-[690px] space-y-[40px] text-secondaryColor text-[20px] leading-[150%] tracking-[1%]">
+            <div className="w-full md:w-[690px] space-y-[24px] sm:space-y-[40px] text-secondaryColor leading-[150%] tracking-[1%]">
                 <p>
                    At THR!BE, we value your privacy. This Privacy Policy explains how we collect, 
                    use, and protect your personal information when you engage with us through our platform, events, 

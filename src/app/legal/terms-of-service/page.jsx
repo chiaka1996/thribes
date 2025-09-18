@@ -2,15 +2,15 @@ import Link from "next/link";
 
 const TermsOfUse = () => {
     return(
-        <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[74px] flex gap-[40px]">
-            <div className="min-w-[240px] text-secondaryColor text-[20px] font-clash tracking-[1%] space-y-[40px] shrink-0">
+        <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[34px] sm:pt-[74px] flex flex-col md:flex-row gap-[40px]">
+            <div className="min-w-full md:min-w-[240px] text-secondaryColor text-[20px] font-clash tracking-[1%] space-y-[24px] sm:space-y-[40px] sm:shrink-0">
                 <div><Link href="/legal/terms-of-service" className="font-[600] text-[#107269] ">Terms of Service</Link></div>
                 <div><Link href="/legal/privacy-policy">Privacy Policy</Link></div>
                 <div><Link href="/legal/membership">Premium membership</Link></div>
                 
             </div>
  
-            <div className="w-[690px] space-y-[40px] text-secondaryColor text-[20px] leading-[150%] tracking-[1%]">
+            <div className="w-full md:w-[690px] space-y-[24px] sm:space-y-[40px] text-secondaryColor leading-[150%] tracking-[1%]">
                 <p>
                     Welcome to THR!BE, a community dedicated to fostering connection, collaboration, 
                     and growth within the tech ecosystem. By accessing, joining, or participating in THR!BE (the “Community”), 
@@ -54,7 +54,7 @@ const TermsOfUse = () => {
                    <h2 className="font-[700]">4. Intellectual Property & Content Usage</h2>
                     <ul className="list-disc list-outside pl-[30px]">
                     <li>Members retain ownership of content they create but grant THR!BE a non-exclusive license to share or promote member-contributed content within and outside the community, with appropriate credit.</li>
-                    <li>THR!BE’s name, logo, design assets, educational materials, and branded content may not be used, copied, distributed, or resold without prior written permission.</li>
+                    <li>THR!BE&#39;s name, logo, design assets, educational materials, and branded content may not be used, copied, distributed, or resold without prior written permission.</li>
                     </ul>
                 </div>
 
@@ -128,7 +128,7 @@ const TermsOfUse = () => {
                 <div>
                    <h2 className="font-[700]">8. Membership Activity & Weeding Policy</h2>
                     <p>To maintain a vibrant, engaged, and high-value community, THR!BE routinely reviews participation. We reserve the right to remove members based on the following conditions:</p>
-                    <div className="space-y-[40px]">
+                    <div className="space-y-[24px] sm:space-y-[40px]">
                     <div>
                         <h5>a. Inactive Memberships</h5>
                         <p>
