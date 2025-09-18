@@ -5,7 +5,7 @@ import Button from "./Button";
 const NavigationBar = () => {
     return(
         <div className="w-full px-[16px] md:px-[20px] py-[24px]">
-        <nav className="tracking-[3%] leading-[150%] max-w-[1248px] mx-auto h-[88px] flex justify-between items-center px-[20px] md:px-[32px]  border border-l-0 md:border-l-[6px] border-t-0 border-r-[0] border-b-[0] border-l-[#E36A02]">
+        <nav className="tracking-[3%] leading-[150%] max-w-[1248px] mx-auto h-[88px] flex justify-between items-center md:px-[32px]  border border-l-0 md:border-l-[6px] border-t-0 border-r-[0] border-b-[0] border-l-[#E36A02]">
             <div className="relative w-[99px] md:w-[119px] h-[30px] md:h-[36px]">
             <Image 
              src="/img/white-logo.png"
