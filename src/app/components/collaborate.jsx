@@ -37,7 +37,7 @@ const Collaborate = () => {
                 </div>
         
                  <div className="rounded-[16px] sm:rounded-[40px] border border-[#E8CD8A] bg-[#FFF1D0] p-[24px] sm:p-[40px] min-h-full sm:min-h-[653px] w-full sm:w-[600px] mx-auto">
-                  <div className="relative  w-full h-[373px] rounded-[20px] mx-auto bg-[#D3D7DA]">
+                  <div className="relative  w-full h-[213px] sm:h-[373px] rounded-[20px] mx-auto bg-[#D3D7DA]">
                     <Image src="/img/build3.png" fill alt="build with thribe community" className="object-center rounded-[20px]" />
                   </div>
                   <div className="mt-[16px] sm:mt-[24px] space-y-[13px] sm:space-y-[24px] text-[#0A1A18]">

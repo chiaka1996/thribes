@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-        <main>
+        <main className="overflow-x-none">
             <section className="bg-[#013D37]">
                 <NavigationBar />
                 <div className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[148px] pb-[136px] text-center space-y-[40px]">
