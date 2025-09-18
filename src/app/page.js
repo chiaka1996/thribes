@@ -198,7 +198,7 @@ export default function Home() {
       <div className="mx-auto max-w-[1248px] px-[16px] md:px-[20px] xl:px-0">
         
         <h1 className="text-[16px] tracking-[16%] text-[#107269]">PRICING</h1>
-        <h3 className="font-clash font-[600] my-[16px] text-[#0A1A18] text-[26px] md:text-[46px] leading-[100%] tracking-[3%] flex text-left flex-col md:flex-row md:items-center gap-y-[16px] md:gap-y-0 md:gap-x-[12px] ">
+        <h3 className="font-clash font-[600] my-[16px] text-[#0A1A18] text-[26px] md:text-[46px] leading-[100%] tracking-[3%] flex text-left flex-row flex-wrap md:items-center gap-y-[16px] gap-y-0 sm:gap-x-[12px] ">
           <span>Choose Your THR!BE </span>
           <div className="flex gap-x-[12px]">
             <span>Experience</span>
@@ -206,8 +206,6 @@ export default function Home() {
             <Image src="/img/pricing.png" fill alt="thribe community" className="object-fit rounded-full shrink-0" />
             </div>
             </div>
-          
-          {/* <Image src="/img/pricing.png" width={46} height={46} alt="thribe community testimonial" className="object-fit shrink-0" /> */}
         </h3>
 
         <div className="mt-[24px] md:mt-[80px] flex flex-col gap-y-[24px]  md:flex-row gap-x-[28px] justify-between">
@@ -237,10 +235,10 @@ export default function Home() {
               </ul>
           </div>
 
-          <div className="relative bg-[#FEF1E6] p-[24px] md:p-[60px] rounded-[20px] md:rounded-[40px] w-full md:w-[480px] min-h-[535px] md:min-h-[742px]">
-            <div className="space-y-[24px] md:space-y-[40px]">
+          <div className="relative bg-[#FEF1E6] p-[24px] sm:p-[60px] rounded-[20px] md:rounded-[40px] w-full md:w-[480px] min-h-[535px] sm:min-h-[742px]">
+            <div className="space-y-[24px] sm:space-y-[40px]">
               <h2 className="font-[600] leading-[120%] tracking-[3%] text-[#0A1A18]">Free Membership</h2>
-              <h3 className="text-[26px] md:text-[32px] font-clash font-[600] text-[#F97502] leading-[100%] tracking-[3%]">Always Free</h3>
+              <h3 className="text-[26px] sm:text-[32px] font-clash font-[600] text-[#F97502] leading-[100%] tracking-[3%]">Always Free</h3>
               <h4 className="leading-[100%] tracking-[2%] text-secondaryColor">The free  plan includes:</h4>
 
               <ul className="space-y-[16px] md:mt-[24px]">
@@ -253,15 +251,15 @@ export default function Home() {
               </ul>
             </div>
 
-             <div className="absolute bottom-[24px] md:bottom-[60px] left-[24px] md:left-[60px] w-[calc(100%-48px)] md:w-[calc(100%-120px)] ">
+             <div className="absolute bottom-[24px] sm:bottom-[60px] left-[24px]sm:left-[60px] w-[calc(100%-48px)] sm:w-[calc(100%-120px)] ">
                <Button name="Join THR!BE for free" classname="bg-[#B15301] w-[100%] shadow-[4px_4px_0px_0px_#693101]" />
             </div>
           </div>
 
-          <div className="relative bg-[#E8F6F4] p-[24px] md:p-[60px] rounded-[20px] md:rounded-[40px] w-full md:w-[480px] min-h-[610px] md:min-h-[742px]">
+          <div className="relative bg-[#E8F6F4] p-[24px] sm:p-[60px] rounded-[20px] md:rounded-[40px] w-full md:w-[480px] min-h-[610px] sm:min-h-[742px]">
             <div className="space-y-[24px] md:space-y-[40px]">
               <h2 className="font-[600] leading-[120%] tracking-[3%] text-[#0A1A18]">Premium Membership</h2>
-              <h3 className="text-[26px] md:text-[32px] font-clash font-[600] text-[#107269] leading-[100%] tracking-[3%]">N96,000/Year</h3>
+              <h3 className="text-[26px] sm:text-[32px] font-clash font-[600] text-[#107269] leading-[100%] tracking-[3%]">N96,000/Year</h3>
               <h4 className="leading-[100%] tracking-[2%] text-secondaryColor">The premium  plan includes:</h4>
 
               <ul className="space-y-[16px] md:mt-[24px]">
@@ -275,7 +273,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="absolute bottom-[24px] md:bottom-[60px] left-[24px] md:left-[60px] w-[calc(100%-48px)] md:w-[calc(100%-120px)]">
+            <div className="absolute bottom-[24px] sm:bottom-[60px] left-[24px] sm:left-[60px] w-[calc(100%-48px)] sm:w-[calc(100%-120px)]">
                <Button name="Join the waiting list" classname="bg-primaryColor w-full shadow-[4px_4px_0px_0px_#003E39]" />
             </div>
           </div>
