@@ -98,7 +98,7 @@ const About = () => {
                 </div>
             </section>
 
-            <div className="mt-[120px] bg-[#F5F6F7] hidden md:block">
+            <div className="mt-[120px] bg-[#F5F6F7] hidden lg:block">
             <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[80px] bg-[#F5F6F7] flex items-center gap-[80px]">
                 <h2 className="leading-[100%] text-[46px] font-clash font-[600] tracking-[3%] text-[#0A1A18] flex space-x-[12px] shrink-0">
                 <span>Our Partners</span>
@@ -117,17 +117,19 @@ const About = () => {
             </div>
 
             {/* meet the team */}
-            <div className="bg-[#001A17] mt-[40px] md:mt-0">
-            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[120px]">
+            <div className="bg-[#001A17] mt-[40px] lg:mt-0">
+            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[40px] sm:py-[120px]">
             <div className="space-y-[16px] text-[#C2C7D0] leading-[150%]">
                 <h1 className=" text-[16px] tracking-[16%] ">COMMUNITY ELDERS</h1>
-                <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[46px] leading-[100%] tracking-[3%] text-[#fff]">
+                <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[26px] sm:text-[46px] leading-[100%] tracking-[3%] text-[#fff]">
                 <span>Meet The Team</span>
-                <Image src="/img/meet.png" width={46} height={46} alt="thribe community" className="object-center rounded-full" />
+                <div className="relative w-[36px] sm:w-[46px] h-[36px] sm:h-[46px] rounded-full">
+                <Image src="/img/meet.png" fill alt="thribe community" className="object-center rounded-full" />
+                </div>
                 </h2>
-                <h3 className="text-[20px] tracking-[2%]">Our bold team holds the vision, energy, and safety of the village.</h3>
+                <h3 className="tracking-[2%]">Our bold team holds the vision, energy, and safety of the village.</h3>
             </div>
-            <div className="mt-[80px] flex justify-between flex-wrap">
+            <div className="mt-[24px] sm:mt-[80px] flex justify-between flex-wrap gap-y-[24px] lg:gap-y-[40px] xl:gap-y-0">
              <TeamCard classname="bg-[#E8F6F4]" name="Thanau Abbas" nickname="AKA Sultana"  role="The Vision Holder" img="/img/member1.png" />
              <TeamCard classname="bg-[#FEF1E6]" name="Jesse Croffie" nickname="AKA Khing"  role="The Strategist" img="/img/member2.png" />
             <TeamCard classname="bg-[#FFF6DF]" name="Mubarak Shittu" nickname="AKA M.O Shittu"  role="The Grounder " img="/img/member3.png" />
@@ -139,18 +141,20 @@ const About = () => {
 
             {/* why join thribe */}
             <div className="bg-[#693101]">
-              <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[120px]">
-                <div className="flex flex-wrap justify-between items-start">
-                    <div className="w-[448px]">
+              <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[40px] sm:py-[120px]">
+                <div className="flex flex-wrap justify-between items-start gap-y-[40px]">
+                    <div className="w-full md:w-[448px]">
                         <h5 className="text-[16px] leading-[150%] tracking-[16%] uppercase text-[#FFE198]">WHY join THR!BE?</h5>
-                        <h2 className="font-clash font-[600] text-[46px] leading-[100%] tracking-[3%] text-[#fff] mt-[16px]">
-                        Why <span className="text-[#FFE198]">THR!BE</span> Feels 
+                        <h2 className="font-clash font-[600] text-[26px] sm:text-[46px] leading-[100%] tracking-[3%] text-[#fff] mt-[16px]">
+                        Why <span className="text-[#FFE198]">THR!BE </span> Feels 
                         </h2>
-                        <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[46px] leading-[100%] tracking-[3%] text-[#fff]">
+                        <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[26px] sm:text-[46px] leading-[100%] tracking-[3%] text-[#fff] mt-[24px] sm:mt-0">
                         <span>Different</span>
-                        <Image src="/img/join-team.png" width={46} height={46} alt="thribe community" className="object-center rounded-full" />
+                        <div className="relative w-[36px] sm:w-[46px] h-[36px] sm:h-[46px] rounded-full">
+                        <Image src="/img/join-team.png" fill alt="thribe community" className="object-center rounded-full" />
+                        </div>
                         </h2>
-                        <div className="mt-[45px]">
+                        <div className="mt-[45px] hidden md:block">
                             <button className="w-[192px] h-[47px] border border-[#FFE198] text-[#FFE198] rounded-[100px] flex gap-[24px] py-[10px] justify-center">
                                 <span>Join THR!BE</span>
                                 <Image src="/icons/arrow-right.png" width={24} height={24} alt="thribe community" className="object-center rounded-full" />
@@ -158,7 +162,7 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="w-[731px] text-[20px] leading-[150%] tracking-[1%] text-[#fff] space-y-[24px]">
+                    <div className="w-full md:w-[731px] text-[20px] leading-[150%] tracking-[1%] text-[#fff] space-y-[24px]">
                         <p>There are a lot tech communities but very few feel like home. We don&#39;t gatekeep. We pass the mic. 
                             Come for the growth. Stay for the vibes. THR!BE is your space to:
                         </p>
@@ -174,6 +178,13 @@ const About = () => {
                         <div className="flex gap-x-[24px] items-center">
                             <Image src="/icons/arrow-right.png" width={24} height={24} alt="thribe community" className="object-center rounded-full" />
                             <span>Laugh, grow, and build together</span>
+                        </div>
+
+                        <div className="block md:hidden pt-[16px]">
+                            <button className="w-[192px] h-[47px] border border-[#FFE198] text-[#FFE198] rounded-[100px] flex gap-[24px] py-[10px] justify-center">
+                                <span>Join THR!BE</span>
+                                <Image src="/icons/arrow-right.png" width={24} height={24} alt="thribe community" className="object-center rounded-full" />
+                            </button>
                         </div>
                     </div>
                 </div>
