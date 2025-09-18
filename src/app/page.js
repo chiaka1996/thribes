@@ -146,18 +146,21 @@ export default function Home() {
     </section>
 
     {/* what we do inside thribe */}
-    <section className="py-[120px] w-full bg-[#013D37]">
+    <section className="py-[40px] md:py-[120px] w-full bg-[#013D37]">
       <div className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0">
         <div className="space-y-[16px] text-[#C2C7D0] leading-[150%]">
-        <h1 className=" text-[16px] tracking-[16%] ">What We Do Inside THR!BE</h1>
-        <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[46px] leading-[100%] tracking-[3%] text-[#fff]">
+        <h1 className=" text-[16px] tracking-[16%] ">WHAT WE DO INSIDE THR!BE</h1>
+        <h2 className="flex items-center gap-x-[12px] font-clash font-[600] text-[26px] md:text-[46px] leading-[100%] tracking-[3%] text-[#fff]">
           <span>Community Activities</span>
-          <Image src="/img/community2.png" width={46} height={46} alt="thribe community" className="object-center rounded-full" />
+            <div className="relative w-[32px] md:w-[46px] h-[32px] md:h-[46px] rounded-full">
+            <Image src="/img/community2.png" fill alt="thribe community" className="object-fit rounded-full" />
+            </div>
+          
           </h2>
-          <h3 className="text-[20px] tracking-[2%]">There&#39;s never a dull moment in here. We keep it real. We keep it moving. We learn. We laugh. We launch. Repeat.</h3>
+          <h3 className="tracking-[2%]">There&#39;s never a dull moment in here. We keep it real. We keep it moving. We learn. We laugh. We launch. Repeat.</h3>
         </div>
 
-        <div className="mt-[80px] flex flex-row flex-wrap px-[30px] justify-between gap-y-[120px]">
+        <div className="mt-[40] md:mt-[80px] flex flex-row flex-wrap px-0 md:px-[30px] justify-between gap-y-[40px] md:gap-y-[120px]">
           <Activities 
             image="/img/microphone.png"
             title="THR!BE Lives & AMAs"
