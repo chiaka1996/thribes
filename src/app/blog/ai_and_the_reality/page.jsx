@@ -22,8 +22,8 @@ const Post = () => {
 
                 <div className="flex justify-between gap-[40px] mt-[24px] w-full pl-[55px]">
                     <div className="w-[480px]">
-                        <div className="relative w-[480px] min-h-[560px]">
-                            <Image src="/img/ai.png" fill alt="thribe community" className="object-cover" />
+                        <div className="relative w-full min-h-[560px] rounded-[40px]">
+                            <Image src="/img/ai.png" fill alt="thribe community" className="object-cover rounded-[40px]" />
                         </div>
                         <div className="mt-[14px] flex justify-between items-start">
                             <div className="leading-[150%] tracking-[1%]">
@@ -47,7 +47,7 @@ const Post = () => {
                     <div className="w-[656px] leading-[150%] tracking-[1%] space-y-[24px]">
                         <h1 className="text-[#0A1A18] font-[600] font-clash text-[46px] leading-[100%] tracking-[3%]">AI and The Reality</h1>
                         <div className="flex items-center gap-x-[24px] text-[16px]">
-                            <button className="W-[70px] h-[32px] bg-[#FFE198] py-[4px] px-[12px] rounded-[10px]">NEWS</button>
+                            <button className="W-[70px] h-[32px] bg-[#FFE198] px-[12px] rounded-[10px]">NEWS</button>
                             <span>Posted July 19,2025</span>
                             <div className="flex items-start gap-x-[5px]"><span>.</span> <span>3 mins read</span></div>
                         </div>
