@@ -3,10 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 import { useAllContext } from "../context/allcontext";
+import { usePathname } from "next/navigation";
 
 
 const NavigationBar = () => {
-    const {toggleNavbar, toggleMobileNavbarFunction} = useAllContext();
+    const {toggleMobileNavbarFunction} = useAllContext();
+     const pathname = usePathname();
+
 
     return(
         <div className="w-full px-[16px] md:px-[20px] py-[24px] bg-[#fff] md:relative ">
@@ -21,9 +24,9 @@ const NavigationBar = () => {
              </div>
 
              <div className="hidden md:block flex flex-row justify-between text-[16px] text-[#354764] font-[600] items-center space-x-[40px]">
-                <Link href="/">Home</Link>
-                 <Link href="/about">About</Link>
-                  <Link href="/events">Events</Link>
+               <Link href="/"  className={pathname==="/" ? "text-[#087C72]" : ""}>Home</Link>
+                 <Link href="/about" className={pathname==="/about" ? "text-[#087C72]" : ""}>About</Link>
+                  <Link href="/events" className={pathname==="/events" ? "text-[#087C72]" : ""}>Events</Link>
                    <Link href="#">Resources</Link>
              </div>
 
