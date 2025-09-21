@@ -1,5 +1,6 @@
 import Image from "next/image";
 import NavigationBar from "./components/navigation";
+import MobileNav from "./components/MobileNav"
 import Button from "./components/Button";
 import Community from "./components/community";
 import Activities from "./components/Activities";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
    <div className="overflow-x-hidden">
     <NavigationBar />
+    <MobileNav />
     <section className="text-[#354764] tracking-[1%] leading-[150%] max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[80px] md:pt-[105px] text-center">
       <div className="space-y-[16px] tracking-[1%] ">
       <h2 className="text-[16px] md:text-[18px] font-[400] ">Belong. Grow. Thrive!</h2>

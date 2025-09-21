@@ -1,4 +1,6 @@
+"use client"
 import NavigationBar from "../components/navigation";
+import MobileNavigationBar from "../components/MobileNav";
 import Image from "next/image";
 import Event_banner from "../components/Event_banner"
 import JoinCommunity from "../components/joinCommunity";
@@ -8,6 +10,7 @@ const Events = () => {
     return(
         <main>
             <NavigationBar />
+            <MobileNavigationBar />
             <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[80px] md:pt-[148px] pb-[92px] md:pb-[159px] tracking-[1%] space-y-[40px]">
             <div className="max-w-[1170px]">
                 <h1 className="text-[16px] leading-[150%] tracking-[16%] text-[#087C72]">THR!BE EVENTS</h1>

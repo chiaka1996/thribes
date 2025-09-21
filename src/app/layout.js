@@ -1,6 +1,7 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local"
+import { AllContextProvider } from "./context/allcontext";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -39,7 +40,9 @@ export default function RootLayout({ children }) {
     <html lang="en"  className={`${outfit.variable} ${clashDisplay.variable} font-[400] antialiased text-[18px] sm:text-[20px]`}> 
       <body 
         className={outfit.className}>
-        {children}
+         <AllContextProvider>
+            {children}
+        </AllContextProvider>
       </body>
     </html>
   );

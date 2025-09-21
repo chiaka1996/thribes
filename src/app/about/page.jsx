@@ -1,4 +1,5 @@
 import NavigationBar from "../components/navigation2";
+import MobileNavigationBar from "../components/MobileNav";
 import Image from "next/image";
 import TeamCard from "../components/teamCard";
 import Testimaonial from "../components/testimonials";
@@ -6,11 +7,14 @@ import Collaborate from "../components/collaborate";
 import JoinCommunity from "../components/joinCommunity";
 import Footer from "../components/Footer";
 
+
 const About = () => {
+
     return (
         <main className="overflow-x-none">
             <section className="bg-[linear-gradient(180deg,rgba(2,18,16,0.54)_25.03%,rgba(2,18,16,0.9)_79.92%),url('https://res.cloudinary.com/chiaka/image/upload/v1758228838/thribe_banner_vqi0br.png')] sm:bg-[linear-gradient(180deg,rgba(2,18,16,0.54)_25.03%,rgba(2,18,16,0.9)_79.92%),url('https://res.cloudinary.com/chiaka/image/upload/v1757761490/thribe_hyoxv7.png')]  bg-cover w-full pb-[94px] sm:pb-[142px]">
                 <NavigationBar />
+                <MobileNavigationBar/>
                 <div className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 text-[#fff] tracking-[1%] space-y-[24px] sm:space-y-[40px]">
                     <h2 className="font-clash mt-[346px] sm:mt-[369px] font-[600] leading-[100%] text-[32px] sm:text-[66px] flex items-center gap-x-[12px]">
                     <span>Our Goal</span>

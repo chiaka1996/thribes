@@ -1,8 +1,11 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
+import { useAllContext } from "../context/allcontext";
 
 const NavigationBar = () => {
+    const {toggleNavbar, toggleMobileNavbarFunction} = useAllContext();
     return(
         <div className="w-full px-[16px] md:px-[20px] py-[24px]">
         <nav className="tracking-[3%] leading-[150%] max-w-[1248px] mx-auto h-[88px] flex justify-between items-center md:px-[32px]  border border-l-0 md:border-l-[6px] border-t-0 border-r-[0] border-b-[0] border-l-[#E36A02]">
@@ -22,9 +25,16 @@ const NavigationBar = () => {
                    <Link href="#">Resources</Link>
              </div>
 
-               <div className="flex w-[152px] justify-between items-center">
+               {/* <div className="flex w-[152px] justify-between items-center">
                 <Button name="Join Us" classname="w-[101px] h-[47px] md:w-[141px] bg-[#107269]"/>
                 <div className="relative w-[24px] h-[24px]">
+                <Image src="/img/open_menu_white.png" fill alt="thribe community menu option" className="object-center md:hidden shrink-0" />
+                </div>
+                </div> */}
+
+                <div className="flex w-[30px] md:w-[152px] justify-between items-center ">
+                <Button name="Join Us" classname="w-[101px] h-[47px] md:w-[141px] bg-[#107269] hidden md:block"/>
+                <div className="relative w-[24px] h-[24px]" onClick={toggleMobileNavbarFunction}>
                 <Image src="/img/open_menu_white.png" fill alt="thribe community menu option" className="object-center md:hidden shrink-0" />
                 </div>
                 </div>

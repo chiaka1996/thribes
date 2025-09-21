@@ -1,4 +1,5 @@
 import NavigationBar from "../components/navigation2";
+import MobileNavigationBar from "../components/MobileNav";
 import Image from "next/image";
 import JoinCommunity from "../components/joinCommunity";
 import Footer from "../components/Footer";
@@ -8,6 +9,7 @@ const Events = () => {
         <main >
             <div className="bg-[#0A1A18]">
             <NavigationBar />
+            <MobileNavigationBar />
             <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[80px] md:pt-[148px] pb-[92px] md:pb-[120px] tracking-[1%] space-y-[40px]">
             <div className="max-w-[1170px]">
                 <h1 className="text-[16px] leading-[150%] tracking-[16%] text-[#FFE198]">BLOGS & NEWS</h1>
