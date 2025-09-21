@@ -14,7 +14,7 @@ const Post = () => {
             </div>
 
             <section className="w-full relative min-h-screen">
-                <div className="absolute left-[-270px] top-1/2 -translate-y-1/2 transform -rotate-90 flex gap-x-[24px] items-center px-4 py-2">
+                <div className="absolute left-[-270px] top-[287px] -translate-y-1/2 transform -rotate-90 flex gap-x-[24px] items-center px-4 py-2">
                     <div className="w-[160px] h-[1px] bg-[#FFE198]"></div>
                     <span className="uppercase font-[600] text-[16px] tracking-[16%] text-[#107269]">THR!BE Blog post</span>
                     <div className="w-[160px] h-[1px] bg-[#FFE198]"></div>
@@ -44,7 +44,33 @@ const Post = () => {
                         </div>
                     </div>
 
-                    <div className="w-[656px]">
+                    <div className="w-[656px] leading-[150%] tracking-[1%] space-y-[24px]">
+                        <h1 className="text-[#0A1A18] font-[600] font-clash text-[46px] leading-[100%] tracking-[3%]">AI and The Reality</h1>
+                        <div className="flex items-center gap-x-[24px] text-[16px]">
+                            <button className="W-[70px] h-[32px] bg-[#FFE198] py-[4px] px-[12px] rounded-[10px]">NEWS</button>
+                            <span>Posted July 19,2025</span>
+                            <div className="flex items-start gap-x-[5px]"><span>.</span> <span>3 mins read</span></div>
+                        </div>
+                        <p>
+                           Members retain ownership of content they create but grant THR!BE a non-exclusive license to share or promote member-contributed content within and outside the community, 
+                           with appropriate credit. THR!BE&#39;s name, logo, design assets, educational materials, and branded content may not be used, copied, distributed, or resold without prior written 
+                           permission. Members retain ownership of content they create but grant THR!BE a non-exclusive license to share or promote member-contributed content within and outside the community, 
+                           with appropriate credit. THR!BE&#39;s name, logo, design assets, educational materials, and branded content may not be used, copied, distributed, or resold without 
+                           prior written permission.Members retain ownership of content they create but grant THR!BE a non-exclusive license to share or promote member-contributed content within and outside 
+                           the community, with appropriate credit. 
+                           THR!BE&#39;s name, logo, design assets, educational materials, and branded content may not be used, copied, distributed, or resold without prior written permission. 
+                        </p>
+
+                         <p>
+                           Members retain ownership of content they create but grant THR!BE a non-exclusive license to share or promote member-contributed content within and outside the community, 
+                           with appropriate credit. THR!BE&#39;s name, logo, design assets, educational materials, and branded content may not be used, copied, distributed, or resold without prior written 
+                           permission. Members retain ownership of content they create but grant THR!BE a non-exclusive license to share or promote member-contributed content within and outside the community, 
+                           with appropriate credit. THR!BE&#39;s name, logo, design assets, educational materials, and branded content may not be used, copied, distributed, or resold without 
+                           prior written permission.Members retain ownership of content they create but grant THR!BE a non-exclusive license to share or promote member-contributed content within and outside 
+                           the community, with appropriate credit. 
+                           THR!BE&#39;s name, logo, design assets, educational materials, and branded content may not be used, copied, distributed, or resold without prior written permission. 
+                        </p>
+
 
                     </div>
 
