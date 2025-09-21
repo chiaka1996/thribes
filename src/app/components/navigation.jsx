@@ -13,7 +13,7 @@ const NavigationBar = () => {
 
     return(
         <div className="w-full px-[16px] md:px-[20px] py-[24px] bg-[#fff] md:relative ">
-        <nav className="tracking-[3%] leading-[150%] md:max-w-[1248px] mx-auto h-[48px] md:h-[88px] flex justify-between items-center md:px-[32px]  border border-l-0 md:border-l-[6px] border-t-0 border-r-[0] border-b-[0] border-l-[#E36A02]">
+        <nav className="shadow-[0px_4px_12.6px_0px_#D2D2D21F] tracking-[3%] leading-[150%] md:max-w-[1248px] mx-auto h-[48px] md:h-[88px] flex justify-between items-center md:px-[32px]  border border-l-0 md:border-l-[6px] border-t-0 border-r-[0] border-b-[0] border-l-[#E36A02]">
             <div className="relative w-[99px] md:w-[119px] h-[30px] md:h-[36px]">
             <Image 
              src="/logo.png"
