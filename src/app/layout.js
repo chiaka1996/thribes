@@ -41,6 +41,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en"  className={`${outfit.variable} ${clashDisplay.variable} font-[400] antialiased text-[18px] sm:text-[20px]`}> 
+     <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+          rel="stylesheet"
+        />
+      </head>
       <body 
         className={outfit.className}>
          <AllContextProvider>

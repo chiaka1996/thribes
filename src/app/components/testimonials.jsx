@@ -31,11 +31,17 @@ const Testimaonial = () => {
           </div>
 
           <div className="hidden absolute bottom-0 right-0 rounded-[20px] bg-[#fff] w-[176px] h-[104px] p-[32px] md:flex gap-x-[16px]">
-            <div className="w-[40px] h-[40px] rounded-full bg-[#F8F8F8] flex justify-center items-center">
-              <Image src="/img/arrow2.png" width={7} height={16} alt="thribe community testimonial" className="object-fit shrink-0" />
+            <div className="text-primaryGreen hover:text-[#fff] cursor-pointer hover:bg-primaryGreen w-[40px] h-[40px] rounded-full bg-[#F8F8F8] flex justify-center items-center">
+               <span className="material-symbols-outlined text-[24px] ">
+                chevron_left
+              </span>
+              {/* <Image src="/img/arrow2.png" width={7} height={16} alt="thribe community testimonial" className="object-fit shrink-0" /> */}
             </div>
-            <div className="w-[40px] h-[40px] rounded-full bg-[#F8F8F8] flex justify-center items-center">
-              <Image src="/img/arrow1.png" width={7} height={16} alt="thribe community testimonial" className="object-fit shrink-0" />
+            <div className="text-primaryGreen hover:text-[#fff] cursor-pointer hover:bg-primaryGreen w-[40px] h-[40px] rounded-full bg-[#F8F8F8] flex justify-center items-center">
+              <span className="material-symbols-outlined text-[24px] ">
+                chevron_right
+              </span>
+              {/* <Image src="/img/arrow1.png" width={7} height={16} alt="thribe community testimonial" className="object-fit shrink-0" /> */}
             </div>
           </div>
         </div>
