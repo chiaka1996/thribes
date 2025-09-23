@@ -2,6 +2,9 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local"
 import { AllContextProvider } from "./context/allcontext";
+import LendYourVoice from "./components/Modals/LendYourVoice"
+import JoinTournament from "./components/Modals/JoinTournament" 
+import PartnerWithUs from "./components/Modals/PartnerWithUs"
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -41,6 +44,9 @@ export default function RootLayout({ children }) {
       <body 
         className={outfit.className}>
          <AllContextProvider>
+            <LendYourVoice />
+            <JoinTournament />
+            <PartnerWithUs />
             {children}
         </AllContextProvider>
       </body>

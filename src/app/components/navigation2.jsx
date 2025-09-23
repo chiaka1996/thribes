@@ -26,7 +26,7 @@ const NavigationBar = () => {
                <Link href="/"  className={pathname==="/" ? "text-[#087C72]" : ""}>Home</Link>
                  <Link href="/about" className={pathname==="/about" ? "text-[#087C72]" : ""}>About</Link>
                   <Link href="/events" className={pathname==="/events" ? "text-[#087C72]" : ""}>Events</Link>
-                   <Link href="#">Resources</Link>
+                   <Link href="/blog">Resources</Link>
              </div>
 
                {/* <div className="flex w-[152px] justify-between items-center">
