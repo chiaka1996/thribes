@@ -1,3 +1,6 @@
+"use client"
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import Image from "next/image";
 import NavigationBar from "./components/navigation";
 import MobileNav from "./components/MobileNav"
@@ -11,6 +14,45 @@ import Collaborate from "./components/collaborate";
 import Footer from "./components/Footer";
 
 export default function Home() {
+  const contentRef = useRef(null);
+   const mobileContentRef = useRef(null);
+    const tweenRef = useRef(null);
+
+  useEffect(() => {
+    const contentWidth = contentRef.current.scrollWidth / 2;
+     const mobileContentWidth = mobileContentRef.current.scrollWidth / 2;
+
+    // Infinite scroll animation for desktop
+    tweenRef.current = gsap.to(contentRef.current, {
+      x: -contentWidth,
+      duration: 20,
+      ease: "none",
+      repeat: -1,
+      modifiers: {
+        x: (x) => {
+          const xNum = parseFloat(x);
+          return (xNum % contentWidth) + "px";
+        },
+      },
+    });
+
+     // Infinite scroll animation for mobile
+    tweenRef.current = gsap.to(mobileContentRef.current, {
+      x: -mobileContentWidth,
+      duration: 20,
+      ease: "none",
+      repeat: -1,
+      modifiers: {
+        x: (x) => {
+          const xNum = parseFloat(x);
+          return (xNum % mobileContentWidth) + "px";
+        },
+      },
+    });
+  }, []);
+
+
+
   return (
    <div className="overflow-x-hidden">
     <NavigationBar />
@@ -70,12 +112,28 @@ export default function Home() {
       {/* image collage for desktop view ends here */}
     </section>
 
-    <div className="relative w-full h-[62px] mt-[40px] md:mt-[120px] md:hidden">
-      <Image src="/img/carousel-mobile.png" fill alt="thribe community" className="object-center" />
+    <div ref={mobileContentRef} className=" w-[1800px] overflow-hidden flex md:hidden ">
+      <div className="slide relative w-[600px] h-[62px] mt-[40px]">
+        <Image src="/img/carousel-gif.gif" fill alt="thribe community" className="" unoptimized />
+      </div>
+      <div className="slide relative w-[600px] h-[62px] mt-[40px]">
+        <Image src="/img/carousel-gif.gif" fill alt="thribe community" className="" unoptimized />
+      </div>
+      <div className="slide relative w-[600px] h-[62px] mt-[40px]">
+        <Image src="/img/carousel-gif.gif" fill alt="thribe community" className="" unoptimized />
+      </div>
     </div>
 
-    <div className="relative w-full h-[122px] mt-[40px] md:mt-[120px] hidden md:block">
-      <Image src="/img/carousel-gif.gif" fill alt="thribe community" className="object-center" />
+    <div ref={contentRef} className="md:flex w-[4320px] overflow-hidden hidden">
+      <div className="slide relative w-[1440px] h-[122px] mt-[40px] md:mt-[120px] ">
+        <Image src="/img/carousel-gif.gif" fill alt="thribe community" className="" unoptimized />
+      </div>
+      <div className="slide relative w-[1440px] h-[122px] mt-[40px] md:mt-[120px]">
+        <Image src="/img/carousel-gif.gif" fill alt="thribe community" className="" unoptimized />
+      </div>
+      <div className="slide relative w-[1440px] h-[122px] mt-[40px] md:mt-[120px]">
+        <Image src="/img/carousel-gif.gif" fill alt="thribe community" className="" unoptimized />
+      </div>
     </div>
 
 
