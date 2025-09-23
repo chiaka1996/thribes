@@ -36,3 +36,12 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
+
+.navLink{
+  display: block;
+  padding: 10px;
+}
+
+.navLink:hover{
+  border-bottom: 1px solid #000;
+}

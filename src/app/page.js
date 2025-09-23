@@ -17,7 +17,7 @@ export default function Home() {
     <MobileNav />
     <section className="text-[#354764] tracking-[1%] leading-[150%] max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[80px] md:pt-[105px] text-center">
       <div className="space-y-[16px] tracking-[1%] ">
-      <h2 className="text-[16px] md:text-[18px] font-[400] ">Belong. Grow. Thrive!</h2>
+      <h2 className="text-[16px] md:text-[18px] font-[400] ">Belong<span className="text-[#F97502]">.</span> Share<span className="text-[#F97502]">.</span> Thrive!</h2>
       <h1 className="font-clash font-[600] leading-[100%] text-[32px] md:text-[66px] text-[#107269] flex justify-center">
         <span>Welcome to</span>
         <div className="relative w-[126px] md:w-[260px] h-[32px] md:h-[69px]">
@@ -26,7 +26,9 @@ export default function Home() {
          </h1>
 
          <div className="font-[400] max-w-[590px] mx-auto">
-          A vibrant, inclusive tech community for all tech builders, thinkers, and doers ready to connect, grow, and thrive together.
+          A vibrant, inclusive community for tech minds to share wins, struggles, 
+          lessons and real talk. We connect professionals, 
+          create safe spaces, and even kick ball together.
          </div>
 
     <div className="mt-[32px] flex justify-center">

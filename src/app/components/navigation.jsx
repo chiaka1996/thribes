@@ -23,11 +23,11 @@ const NavigationBar = () => {
              />
              </div>
 
-             <div className="hidden md:block flex flex-row justify-between text-[16px] text-[#354764] font-[600] items-center space-x-[40px]">
-               <Link href="/"  className={pathname==="/" ? "text-[#087C72]" : ""}>Home</Link>
-                 <Link href="/about" className={pathname==="/about" ? "text-[#087C72]" : ""}>About</Link>
-                  <Link href="/events" className={pathname==="/events" ? "text-[#087C72]" : ""}>Events</Link>
-                   <Link href="/blog">Resources</Link>
+             <div className="hidden md:flex justify-between space-x-[40px] text-[16px] text-[#354764]  items-center">
+               <Link href="/"  className={`navLink ${pathname==="/" ? "text-[#087C72] font-[600]" : ""}`}>Home</Link>
+                 <Link href="/about" className={`navLink {pathname==="/about" ? "text-[#087C72]" : ""}`}>About</Link>
+                  <Link href="/events" className={`navLink {pathname==="/about" ? "text-[#087C72]" : ""}`}>Events</Link>
+                   <Link href="/blog" className={`navLink {pathname==="/about" ? "text-[#087C72]" : ""}`} >Resources</Link>
              </div>
 
                 <div className="flex w-[30px] md:w-[152px] justify-between items-center ">
