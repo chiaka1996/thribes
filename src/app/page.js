@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import NavigationBar from "./components/navigation";
@@ -18,9 +18,15 @@ export default function Home() {
    const mobileContentRef = useRef(null);
     const tweenRef = useRef(null);
 
+    const prices = {monthly: "N10,000/Month", quaterly: "N25,500/Quater", yearly: "N96,000/Year"}
+    const [selectedPrice, setSelectedPrice] = useState('yearly')
+
+
   useEffect(() => {
     const contentWidth = contentRef.current.scrollWidth / 2;
      const mobileContentWidth = mobileContentRef.current.scrollWidth / 2;
+
+     setSelectedPrice('yearly')
 
     // Infinite scroll animation for desktop
     tweenRef.current = gsap.to(contentRef.current, {
@@ -202,7 +208,7 @@ export default function Home() {
            not hustle culture. Tech isn&#39;t just about work - it&#39;s about people. At THR!BE, you&#39;ll find a tribe that gets it. 
            We mix learning with laughter, growth with community, and celebration with impact. We laugh, play, grow, and thrive - together. 
           </p>
-          <Button name="Join THR!BE" classname="bg-[#B15301] w-[144px] md:w-[184px] h-[47px] md:h-[56px] shadow-[4px_4px_0px_0px_#693101]" />
+          <Button name="Join THR!BE" classname="bg-[#B15301] w-[144px] md:w-[184px] h-[47px] md:h-[56px] shadow-[4px_4px_0px_0px_#693101] hover:shadow-[4px_4px_0px_0px_#FBA355]" />
         </div>
         </div>
       </div>
@@ -276,29 +282,44 @@ export default function Home() {
             <h3 className="font-[600] tracking-[3%] text-[#354764]">Payment frequency</h3>
             {/* for desktop view */}
             <ul className="mt-[40px] text-secondaryColor space-y-[24px] hidden md:block">
-              <li className="flex items-center gap-x-[24px]">
-                <input type="radio" id="monthly" name="payment" value="monthly" />
-                <label htmlFor="monthly">Monthly</label>
+              <li className="">
+                 <label className="flex items-center space-x-[24px] cursor-pointer" onClick={() => setSelectedPrice("monthly")}>
+                    <input type="radio" name="price" value="monthly" className="peer hidden" />
+                    <span className={`w-[24px] h-[24px] border rounded-full flex items-center justify-center ${selectedPrice === 'monthly' ? 'border-primaryGreen bg-primaryGreen' : 'border-[#AEACA3]'}`}>
+                      <span className={`w-[10px] h-[10px] bg-[#fff] border border-[#fff] rounded-full`}></span>
+                    </span>
+                    <span className={`${selectedPrice === 'monthly' ? 'text-primaryGreen font-[500]' : ''}`}>Monthly </span>
+                  </label>
               </li>
                <li className="flex items-center gap-x-[24px]">
-                <input type="radio" id="quarterly" name="payment" value="quaterly" />
-                <label htmlFor="quarterly">Quaterly (save 15%)</label>
+                 <label className="flex items-center space-x-[24px] cursor-pointer" onClick={() => setSelectedPrice("quaterly")}>
+                    <input type="radio" name="price" value="monthly" className="peer hidden" />
+                    <span className={`w-[24px] h-[24px] border border-[#AEACA3]  rounded-full flex items-center justify-center ${selectedPrice === 'quaterly' ? 'border-primaryGreen bg-primaryGreen' : 'border-[#AEACA3]'}`}>
+                      <span className={`w-[10px] h-[10px] bg-[#fff] border border-[#fff] rounded-full`}></span>
+                    </span>
+                    <span className={`${selectedPrice === 'quaterly' ? 'text-primaryGreen font-[500]' : ''}`}>Quaterly (save 15%) </span>
+                  </label>
               </li>
               <li className="flex items-center gap-x-[24px]">
-                <input type="radio" id="yearly" name="payment" value="yearly" />
-                <label htmlFor="yearly">Yearly (save 20%)</label>
+                <label className="flex items-center space-x-[24px] cursor-pointer" onClick={() => setSelectedPrice("yearly")}>
+                    <input type="radio" name="price" value="monthly" className="peer hidden" />
+                    <span className={`w-[24px] h-[24px] border border-[#AEACA3]  rounded-full flex items-center justify-center ${selectedPrice === 'yearly' ? 'border-primaryGreen bg-primaryGreen' : 'border-[#AEACA3]'}`}>
+                      <span className={`w-[10px] h-[10px] bg-[#fff] border border-[#fff] rounded-full`}></span>
+                    </span>
+                    <span className={`${selectedPrice === 'yearly' ? 'text-primaryGreen font-[500]' : ''}`}>Yearly (save 20%) </span>
+                  </label>
               </li>
             </ul>
 
             {/* for mobile view */}
               <ul className="mt-[16px] flex justify-between text-[16px] leading-[150%] tracking-[1%] text-secondaryColor block md:hidden">
-                <li>Monthly</li>
-                <li>Quarterly (-15%)</li>
-                <li>Yearly (-20%)</li>
+                <li onClick={() => setSelectedPrice("monthly")} className={`px-[8px] py-[4px] ${selectedPrice === 'monthly' ? 'text-primaryGreen font-[600] border-[2px] border-b-primaryGreen border-x-0 border-t-0' : ''} `}>Monthly</li>
+                <li onClick={() => setSelectedPrice("quaterly")} className={`px-[8px] py-[4px] ${selectedPrice === 'quaterly' ? 'text-primaryGreen font-[600] border-[2px] border-b-primaryGreen border-x-0 border-t-0' : ''} `}>Quarterly (-15%)</li>
+                <li onClick={() => setSelectedPrice("yearly")} className={`px-[8px] py-[4px] ${selectedPrice === 'yearly' ? 'text-primaryGreen font-[600] border-[2px] border-b-primaryGreen border-x-0 border-t-0' : ''} `}>Yearly (-20%)</li>
               </ul>
           </div>
 
-          <div className="relative bg-[#FEF1E6] p-[24px] sm:p-[60px] rounded-[20px] md:rounded-[40px] w-full md:w-[480px] min-h-[535px] sm:min-h-[742px]">
+          <div className="relative bg-[#FEF1E6] p-[24px] sm:p-[60px] rounded-[20px] md:rounded-[40px] w-full md:w-[480px] min-h-[485px] sm:min-h-[650px]">
             <div className="space-y-[24px] sm:space-y-[40px]">
               <h2 className="font-[600] leading-[120%] tracking-[3%] text-[#0A1A18]">Free Membership</h2>
               <h3 className="text-[26px] sm:text-[32px] font-clash font-[600] text-[#F97502] leading-[100%] tracking-[3%]">Always Free</h3>
@@ -310,27 +331,29 @@ export default function Home() {
                 <PricingList title="Access blog/podcast content" />
                 <PricingList title="Participate in challenges & general community activities" />
                 <PricingList title="Access to collaboration" />
-                <PricingList title="Access to job listings & posts" />
+                {/* <PricingList title="Access to job listings & posts" /> */}
               </ul>
             </div>
 
              <div className="absolute bottom-[24px] sm:bottom-[60px] left-[24px]sm:left-[60px] w-[calc(100%-48px)] sm:w-[calc(100%-120px)] ">
-               <Button name="Join THR!BE for free" classname="bg-[#B15301] w-[100%] shadow-[4px_4px_0px_0px_#693101]" />
+               <Button name="Join THR!BE for free" classname="bg-[#B15301] w-[100%] shadow-[4px_4px_0px_0px_#693101] hover:shadow-[4px_4px_0px_0px_#FBA355]" />
             </div>
           </div>
 
-          <div className="relative bg-[#E8F6F4] p-[24px] sm:p-[60px] rounded-[20px] md:rounded-[40px] w-full md:w-[480px] min-h-[610px] sm:min-h-[742px]">
+          <div className="relative bg-[#E8F6F4] p-[24px] sm:p-[60px] rounded-[20px] md:rounded-[40px] w-full md:w-[480px] min-h-[485px] sm:min-h-[650px]">
             <div className="space-y-[24px] md:space-y-[40px]">
               <h2 className="font-[600] leading-[120%] tracking-[3%] text-[#0A1A18]">Premium Membership</h2>
-              <h3 className="text-[26px] sm:text-[32px] font-clash font-[600] text-[#107269] leading-[100%] tracking-[3%]">N96,000/Year</h3>
+              <h3 className="text-[26px] sm:text-[32px] font-clash font-[600] text-[#107269] leading-[100%] tracking-[3%]">
+                {Object.keys(prices).includes(selectedPrice) && prices[selectedPrice]}
+                </h3>
               <h4 className="leading-[100%] tracking-[2%] text-secondaryColor">The premium  plan includes:</h4>
 
               <ul className="space-y-[16px] md:mt-[24px]">
                 <PricingList title="Everything in free plan" />
                 <PricingList title="Monthly Masterclasses" />
                 <PricingList title="Discounts on external paid events" />
-                <PricingList title="Project reviews" />
-                <PricingList title="Exclusive job boards" />
+                {/* <PricingList title="Project reviews" /> */}
+                {/* <PricingList title="Exclusive job boards" /> */}
                 <PricingList title="Legal employment contract reviews and advise." />
                 <PricingList title="Yearly merch & rewards" />
               </ul>
