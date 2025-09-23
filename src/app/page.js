@@ -69,11 +69,13 @@ export default function Home() {
       </div>
       {/* image collage for desktop view ends here */}
     </section>
+
     <div className="relative w-full h-[62px] mt-[40px] md:mt-[120px] md:hidden">
       <Image src="/img/carousel-mobile.png" fill alt="thribe community" className="object-center" />
     </div>
+
     <div className="relative w-full h-[122px] mt-[40px] md:mt-[120px] hidden md:block">
-      <Image src="/img/carousel.png" fill alt="thribe community" className="object-center" />
+      <Image src="/img/carousel-gif.gif" fill alt="thribe community" className="object-center" />
     </div>
 
 
