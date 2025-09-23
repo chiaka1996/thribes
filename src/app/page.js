@@ -32,7 +32,7 @@ export default function Home() {
          </div>
 
     <div className="mt-[32px] flex justify-center">
-     <button className={`flex items-center space-x-[5px] justify-center bg-[#107269] w-[244px] md:w-[284px] h-[47px] md:h-[56px] cursor-pointer shadow-[4px_4px_0px_0px_#003E39] font-[500] text-[18px] text-[#fff] rounded-[100px]`}>
+     <button className={`flex items-center space-x-[5px] justify-center bg-[#107269] w-[244px] md:w-[284px] h-[47px] md:h-[56px] cursor-pointer shadow-[4px_4px_0px_0px_#003E39] hover:shadow-[4px_4px_0px_0px_#64C0B7] font-[500] text-[18px] text-[#fff] rounded-[100px]`}>
         <span>Join The community</span>
         <Image src="/img/arrow-right.png" width={24} height={24} alt="thribe community" className="" />
      </button>
@@ -91,8 +91,9 @@ export default function Home() {
             </h2>
         </div>
         <div className="mt-[24px] tracking-[2%] text-secondaryColor">
-          A human-first tech community built on connection, growth and collaboration. This is not just another tech group. 
-          This is your THR!BE - The tribe that thrives.
+          <p>It is built on connection, growth and collaboration. This is not just another tech group.</p>
+
+        <p className="mt-[24px]">This is your THR!BE - The tribe that thrives.</p>
         </div>
         <Button name="Join The tribe Now" classname="w-[196px] md:w-[236px] h-[47px] md:h-[56px] bg-primaryColor" />
       </div>
@@ -101,23 +102,23 @@ export default function Home() {
         <div className="w-full grid-container gap-[40px]">
          <Community
           number="01"
-          heading="Learn & Grow"
-          paragraph="Stay sharp. Whether you're just starting or scaling, THR!BE gives you access to insights, tools, and real people who help you level up."
+          heading="Expression"
+          paragraph="We give techies a voice to share their wins, struggles, failures or dreams. This is the couch where it&#39;s safe to talk."
           />
          <Community
           number="02"
-          heading="Collaborate & Connect"
-          paragraph="No one builds alone. Connect with techies across fields, join hands on exciting projects, and form genuine friendships along the way."
+          heading="Guidance"
+          paragraph="We help people find their path, connect them with the right resources, and pivot when needed."
           />
            <Community
           number="03"
-          heading="Build & Belong"
-          paragraph="Build real ideas, shape products, and finally feel like you&#39;re part of something big with purpose, impact, and a community that truly sees you."
+          heading="Belong"
+          paragraph="THR!BE is an actual tribe for humans in tech. Real bonds, real collaborations, real people who lift each other up."
           />
          <Community
           number="04"
-          heading="Collaborate & Connect"
-          paragraph="Your skills can change the world. At THR!BE, we don&#39;t just talk tech - we build solutions that matter. Let&#39;s shape the future."
+          heading="Balance"
+          paragraph="Because life is more than work - from football to games, we create joy, play, and wellness for thriving humans."
           />
           </div>
       </div>
