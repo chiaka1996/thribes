@@ -61,34 +61,56 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h3 className="text-[#6B788E] leading-[150%] tracking-[2%]">Home</h3>
+                    <h3 className="text-[#6B788E] leading-[150%] tracking-[2%] md:px-[10px]">Home</h3>
                     <div className="mt-[38px] text-[#354764] tracking-[2%] flex flex-col gap-y-[18px]">
-                        <Link href="/about">About</Link>
-                        <Link href="/events">Events</Link>
-                        <Link href="/">Pricing</Link>
-                        <Link href="/">Join the community</Link>
+                        <span>
+                        <Link href="/about" className="navLinkFooter md:p-[10px]">About</Link>
+                        </span>
+                        <span>
+                        <Link href="/events" className="navLinkFooter md:p-[10px]">Events</Link>
+                        </span>
+                        <span>
+                        <Link href="/" className="navLinkFooter md:p-[10px]">Pricing</Link>
+                        </span>
+                        <span>
+                        <Link href="/" className="navLinkFooter md:p-[10px]">Join the community</Link>
+                        </span>
+                        
+                        
                     </div>
                 </div>
                 <div>
-                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%]">SUPPORT</h3>
+                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%] md:px-[10px]">SUPPORT</h3>
                     <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
-                        <Link href="#">Buy a merch</Link>
-                        <Link href="#">Support a member</Link>
-                        <Link href="#">Partner with us</Link>
+                        <span>
+                        <Link href="#" className="navLinkFooter md:p-[10px]">Buy a merch</Link>
+                        </span>
+                        <span>
+                        <Link href="#" className="navLinkFooter md:p-[10px]">Support a member</Link>
+                        </span>
+                        <span>
+                        <Link href="#" className="navLinkFooter md:p-[10px]">Partner with us</Link>
+                        </span>
                     </div>
                 </div>
                 <div>
-                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%]">RESOURCCES</h3>
+                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%] md:px-[10px]">RESOURCCES</h3>
                     <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
-                        <Link href="#">Blog & News</Link>
-                        <Link href="#">Podcast</Link>
+                        <span>
+                        <Link href="#" className="navLinkFooter md:p-[10px]">Blog & News</Link>
+                        </span>
+                        <span>
+                        <Link href="#" className="navLinkFooter md:p-[10px]">Podcast</Link>
+                        </span>
                     </div>
                 </div>
                 <div>
-                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%]">LEGAL</h3>
+                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%] md:px-[10px]">LEGAL</h3>
                     <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
-                        <Link href="/legal/privacy-policy">Privacy policy</Link>
-                        <Link href="/legal/terms-of-service">Terms of service</Link>
+                        <span>
+                        <Link href="/legal/privacy-policy" className="navLinkFooter md:p-[10px]">Privacy policy</Link>
+                        </span>
+                        <Link href="/legal/terms-of-service" className="navLinkFooter md:p-[10px]">Terms of service</Link>
                     </div>
                 </div>
 

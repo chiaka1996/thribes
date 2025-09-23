@@ -45,3 +45,11 @@ body {
 .navLink:hover{
   border-bottom: 1px solid #000;
 }
+
+.navLinkFooter{
+  display: inline;
+}
+
+.navLinkFooter:hover{
+  border-bottom: 1px solid #000;
+}
