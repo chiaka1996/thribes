@@ -132,17 +132,15 @@ export default function Home() {
           <h1 className="font-clash text-[26px] md:text-[46px] leading-[100%] font-[600] tracking-[3%]">Why <span className="text-[#E36A02]">THR!BE</span> Exists</h1>
         </div>
 
-        <div className="flex flex-col md:flex-row mt-[24px] md:mt-[48px] justify-between md:gap-x-[24px] gap-y-[24px] md:gap-y-0">
+        <div className="flex flex-col md:flex-row mt-[24px] md:mt-[48px] justify-between md:gap-x-[24px] gap-y-[24px] md:gap-y-0 items-center">
          <div className="relative w-[343px] md:w-[711px] h-[173px] md:h-[360px]">
           <Image src="/img/vid.png" fill alt="thribe community" className="object-center" />
         </div>
         <div className="w-full md:w-[513px] leading-[150%] tracking-[2%] text-[#52514D]">
-          <p>
-            Tech can feel cold, competitive, and isolating. We&#39;re here to change that. THR!BE was built for humans first, not hustle culture. We mix learning with laughter, growth with community, and celebration with impact. We’re building loudly, not quietly.
-            We&#39;re here to grow together. We believe in showing up fully, flaws and all.
-          </p>
-          <p className=" mt-[30px] md:mt-[60px] mb-[24px]">
-            This is not just another tech group. This is your tribe.
+          <p className="mb-[24px]">
+           Working in tech can feel cold, competitive, and isolating -we&#39;re here to change that. THR!BE was built for humans first, 
+           not hustle culture. Tech isn&#39;t just about work - it&#39;s about people. At THR!BE, you&#39;ll find a tribe that gets it. 
+           We mix learning with laughter, growth with community, and celebration with impact. We laugh, play, grow, and thrive - together. 
           </p>
           <Button name="Join THR!BE" classname="bg-[#B15301] w-[144px] md:w-[184px] h-[47px] md:h-[56px] shadow-[4px_4px_0px_0px_#693101]" />
         </div>
@@ -168,11 +166,11 @@ export default function Home() {
         <div className="mt-[40] md:mt-[80px] flex flex-row flex-wrap px-0 md:px-[30px] justify-between gap-y-[40px] md:gap-y-[120px]">
           <Activities 
             image="/img/microphone.png"
-            title="THR!BE Lives & AMAs"
+            title="Media & Voice"
           />
            <Activities 
-            image="/img/paint.png"
-            title="Challenges & Build Weeks"
+            image="/img/ball.png"
+            title="Balance & Fun"
           />
            <Activities 
             image="/img/chat.png"
@@ -184,7 +182,7 @@ export default function Home() {
           />
           <Activities 
             image="/img/mentorship.png"
-            title="Mentorship Sessions"
+            title="Career Guidance"
           />
           <Activities 
             image="/img/hut.png"
