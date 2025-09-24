@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Collaborate = () => {
     return(
-        <section className="py-[40px] md:py-[120px] bg-[#E6ECEB] w-full">
+        <section className="py-[40px] md:py-[120px] w-full">
                  <div className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0">
                  <h1 className="text-[16px] tracking-[16%] text-[#354764] uppercase">Support, Partner, Collaborate</h1>
                   <h3 className="font-clash font-[600] my-[16px] text-[#0A1A18] text-[26px] md:text-[46px] leading-[100%] tracking-[3%] flex text-left flex-row flex-wrap md:items-center gap-y-[11px] md:gap-y-0 gap-x-[5px]">

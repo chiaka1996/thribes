@@ -14,6 +14,8 @@ import Collaborate from "./components/collaborate";
 import Footer from "./components/Footer";
 
 export default function Home() {
+  const outerCircle = useRef(null);
+  const innerCircle = useRef(null)
   const contentRef = useRef(null);
    const mobileContentRef = useRef(null);
     const tweenRef = useRef(null);
@@ -57,6 +59,33 @@ export default function Home() {
     });
   }, []);
 
+  useEffect(() => {
+    if (outerCircle.current && innerCircle.current) {
+      const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+      tl.to(
+        outerCircle.current,
+        {
+          scale: 1.5,
+          opacity: 1,
+          duration: 1.5,
+          ease: "power2.inOut",
+        },
+        0 // sync start
+      );
+
+      tl.to(
+        innerCircle.current,
+        {
+          scale: 1.3,
+          duration: 1.5,
+          ease: "power2.inOut",
+        },
+        0 // sync with outer
+      );
+    }
+  }, []);
+
 
 
   return (
@@ -68,9 +97,17 @@ export default function Home() {
       <h2 className="text-[16px] md:text-[18px] font-[400] ">Belong<span className="text-[#F97502]">.</span> Share<span className="text-[#F97502]">.</span> Thrive!</h2>
       
       <div className="flex space-x-[16px] items-center justify-center">
-          <div className="flex justify-center items-center w-[40px] h-[40px] rounded-full bg-[#FFE1C7] ">
-            <div className="bg-[#F97502] w-[20px] h-[20px] rounded-full "></div>
-          </div>
+        {/* pulsating circles */}
+        <div className="hidden sm:flex justify-center items-center w-[40px] h-[40px] relative ">
+              <div
+                ref={outerCircle}
+                className="absolute w-[30px] h-[30px] rounded-full bg-[#FFE1C7] opacity-0"
+              ></div>
+              <div
+                ref={innerCircle}
+                className="relative bg-[#F97502] w-[20px] h-[20px] rounded-full"
+              ></div>
+        </div>
         <h1 className="font-clash font-[600] leading-[100%] text-[32px] md:text-[66px] text-[#107269] flex justify-center">
         <span>Welcome to</span>
         <div className="relative w-[126px] md:w-[260px] h-[32px] md:h-[69px]">
