@@ -66,12 +66,18 @@ export default function Home() {
     <section className="text-[#354764] tracking-[1%] leading-[150%] max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 pt-[80px] md:pt-[105px] text-center">
       <div className="space-y-[16px] tracking-[1%] ">
       <h2 className="text-[16px] md:text-[18px] font-[400] ">Belong<span className="text-[#F97502]">.</span> Share<span className="text-[#F97502]">.</span> Thrive!</h2>
-      <h1 className="font-clash font-[600] leading-[100%] text-[32px] md:text-[66px] text-[#107269] flex justify-center">
+      
+      <div className="flex space-x-[16px] items-center justify-center">
+          <div className="flex justify-center items-center w-[40px] h-[40px] rounded-full bg-[#FFE1C7] ">
+            <div className="bg-[#F97502] w-[20px] h-[20px] rounded-full "></div>
+          </div>
+        <h1 className="font-clash font-[600] leading-[100%] text-[32px] md:text-[66px] text-[#107269] flex justify-center">
         <span>Welcome to</span>
         <div className="relative w-[126px] md:w-[260px] h-[32px] md:h-[69px]">
           <Image src="/img/thribe.png" fill alt="thribe community" className="object-center" />
         </div>
          </h1>
+      </div>
 
          <div className="font-[400] max-w-[590px] mx-auto">
           A vibrant, inclusive community for tech minds to share wins, struggles, 
