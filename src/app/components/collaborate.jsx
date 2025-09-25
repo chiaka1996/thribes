@@ -60,9 +60,7 @@ const Collaborate = () => {
             onMouseEnter={() => setHoverLendVoice(true)}
             onMouseLeave={() => setHoverLendVoice(false)}
             className={`${
-              !hoverLendVoice
-                ? "bg-[#B7E2DE]"
-                : "shadow-[7px_7px_0px_0px_#64C0B7] bg-primaryGreen text-[#fff]"
+              !hoverLendVoice? "bg-[#B7E2DE]" : "shadow-[7px_7px_0px_0px_#64C0B7] bg-primaryGreen text-[#fff]"
             } min-h-[459px] sm:min-h-[653px] w-full sm:w-[600px] mx-auto cursor-pointer rounded-[16px] sm:rounded-[40px] border border-[#17A194]  p-[24px] sm:p-[40px] `}
           >
             <div className="relative w-full h-[213px] sm:h-[373px] rounded-[11px] sm:rounded-[20px] mx-auto">
@@ -113,11 +111,7 @@ const Collaborate = () => {
                   ) : (
                     <div className="flex justify-center items-center space-x-[14px] text-primaryGreen">
                       <div
-                        className={`${
-                          !hoverLendVoice
-                            ? "opacity-0 delay-500"
-                            : "opacity-100 delay-0"
-                        } min-w-[180px] transition-all  duration-500 ease-in-out`}
+                        className={`${!hoverLendVoice ? "opacity-0 delay-500" : "opacity-100 delay-0"} min-w-[180px] transition-all  duration-500 ease-in-out`}
                       >
                         Start the Conversation
                       </div>
@@ -214,6 +208,31 @@ const Collaborate = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* comming soon */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-[24px] mt-[48px] border border-[#FCC08B] bg-[#FEF1E6] rounded-[40px] p-[24px] sm:p-[40px] w-full">
+          <div className="relative rounded-[20px] w-full sm:w-[520px] h-[213px] sm:h-[373px] bg-[#693101]">
+            <Image src="https://res.cloudinary.com/chiaka/image/upload/v1758798676/tournament_sdfcge.png" fill alt="tech community in Nigeria" className="object-fill rounded-[20px]" />
+          </div>
+          <div className="w-full md:w-[620px] space-y-[14px] sm:space-y-[24px]">
+            <h1 className="text-[#0A1A18] font-[600] font-clash leading-[120%] tracking-[3%]">Join the Tournamnet</h1>
+            <div className="">
+              Step off the screen and onto the field. Play, cheer, or rep your team/company because thriving means balance, fun, and 
+              community spirit.
+              <p className="hidden md:block">This isn&#39;t just a game, it&#39;s where techies swap keyboards for jerseys, competition meets collaboration, 
+              and friendships are built beyond the screen. Whether you&#39;re scoring goals, cheering from the sidelines, or 
+              rocking your team colors, 
+              you&#39;re part of something bigger. Get ready to connect, sweat, laugh, and thrive together.
+              </p>
+            </div>
+
+            <button className="cursor-pointer rounded-[100px] w-[164px] sm:w-[190px] h-[47px] sm:h-[56px] border border-[#F97502] px-[29px] sm:px-[40px] font-[500] text-[18px] text-[#F97502] leading-[150%] tracking-[3%]">
+              Coming soon
+            </button>
+
+          </div>
+
         </div>
       </div>
     </section>

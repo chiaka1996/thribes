@@ -378,7 +378,7 @@ export default function Home() {
               </ul>
             </div>
 
-             <div className="absolute bottom-[24px] sm:bottom-[60px] left-[24px]sm:left-[60px] w-[calc(100%-48px)] sm:w-[calc(100%-120px)] ">
+             <div className="mt-[40px] w-full">
                <Button name="Join THR!BE for free" classname="bg-[#B15301] w-[100%] shadow-[4px_4px_0px_0px_#693101] hover:shadow-[4px_4px_0px_0px_#FBA355]" />
             </div>
           </div>
@@ -402,7 +402,8 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="absolute bottom-[24px] sm:bottom-[60px] left-[24px] sm:left-[60px] w-[calc(100%-48px)] sm:w-[calc(100%-120px)]">
+            {/* <div className="absolute bottom-[24px] sm:bottom-[60px] left-[24px] sm:left-[60px] w-[calc(100%-48px)] sm:w-[calc(100%-120px)]"> */}
+             <div className="mt-[40px] w-full">
                <Button name="Join the waiting list" classname="bg-primaryColor w-full shadow-[4px_4px_0px_0px_#003E39]" />
             </div>
           </div>
@@ -411,7 +412,7 @@ export default function Home() {
       </div> 
     </section>
 
-      <Collaborate />
+      <Collaborate />    
       <JoinCommunity />
       <Footer />
    </div>
