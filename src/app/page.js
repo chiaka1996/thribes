@@ -13,6 +13,7 @@ import Testimaonial from "./components/testimonials";
 import Collaborate from "./components/collaborate";
 import Footer from "./components/Footer";
 
+
 export default function Home() {
   const outerCircle = useRef(null);
   const innerCircle = useRef(null)

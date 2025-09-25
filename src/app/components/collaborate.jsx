@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import { useAllContext } from "../context/allcontext";
 
 const Collaborate = () => {
+  const {toggleLendYourVoiceThribeModal, toggleJoinTournamentModal} = useAllContext()
   const [hoverLendVoice, setHoverLendVoice] = useState(false);
   const [hoverJoinTournament, setHoverJoinTournament] = useState(false);
   const animationImages = ["/img/tote1.png", "/img/tote2.png", "/img/join1.png"];
@@ -14,7 +16,7 @@ const Collaborate = () => {
     if (intervalRef.current) return; // prevent multiple intervals
     intervalRef.current = setInterval(() => {
       setCurrentImg((prev) => (prev + 1) % animationImages.length);
-    }, 2000);
+    }, 1000);
   };
 
   const stopInterval = () => {
@@ -59,6 +61,7 @@ const Collaborate = () => {
           <div
             onMouseEnter={() => setHoverLendVoice(true)}
             onMouseLeave={() => setHoverLendVoice(false)}
+            onClick={toggleLendYourVoiceThribeModal}
             className={`${
               !hoverLendVoice? "bg-[#B7E2DE]" : "shadow-[7px_7px_0px_0px_#64C0B7] bg-primaryGreen text-[#fff]"
             } min-h-[459px] sm:min-h-[653px] w-full sm:w-[600px] mx-auto cursor-pointer rounded-[16px] sm:rounded-[40px] border border-[#17A194]  p-[24px] sm:p-[40px] `}
@@ -127,6 +130,7 @@ const Collaborate = () => {
 
           {/* Card 2 */}
           <div
+            onClick={toggleJoinTournamentModal}
             onMouseEnter={() => {
               setHoverJoinTournament(true);
               startInterval();

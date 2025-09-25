@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useAllContext } from "../context/allcontext";
 
 const Footer = () => {
+    const {toggleLendYourVoiceThribeModal, toggleJoinTournamentModal} = useAllContext()
     return (
         <div className="text-[20px]">
         <section className="bg-[#FFF] pt-[40px] md:pt-[120px] pb-[40px] md:pb-[74px]">
@@ -84,11 +86,11 @@ const Footer = () => {
                 <div>
                     <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%] md:px-[10px]">ACTIVITIES</h3>
                     <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
-                        <span>
-                        <Link href="#" className="navLinkFooter md:p-[10px]">Lend Your Voice</Link>
+                        <span className="md:p-[10px] cursor-pointer" onClick={toggleLendYourVoiceThribeModal} >
+                        Lend Your Voice
                         </span>
                         <span>
-                        <Link href="#" className="navLinkFooter md:p-[10px]">Shop</Link>
+                        <Link href="#" className="navLinkFooter md:p-[10px] cursor-pointer">Shop</Link>
                         </span>
                         <span>
                         <Link href="#" className="md:p-[10px] flex space-x-[10px]">
@@ -119,7 +121,7 @@ const Footer = () => {
                     <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%] md:px-[10px]">LEGAL</h3>
                     <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
                         <span>
-                        <Link href="/legal/privacy-policy" className="navLinkFooter md:p-[10px]">Privacy policy</Link>
+                        <Link href="/legal/privacy-policy" className="navLinkFooter md:p-[10px] ">Privacy policy</Link>
                         </span>
                         <Link href="/legal/terms-of-service" className="navLinkFooter md:p-[10px]">Terms of service</Link>
                     </div>
