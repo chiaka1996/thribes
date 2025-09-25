@@ -1,6 +1,11 @@
+"use client"
+import { useState } from "react";
 import Image from "next/image";
 
 const Collaborate = () => {
+  const [hoverLendVoice, setHoverLendVoice] = useState(false);
+  const [hoverJoinTournament, setHoverJoinTournament] = useState(false)
+
     return(
         <section className="py-[40px] md:py-[120px] w-full">
                  <div className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0">
@@ -16,39 +21,77 @@ const Collaborate = () => {
                   {/* <Image src="/img/build.png" width={46} height={46} alt="thribe community testimonial" className="object-fit shrink-0" /> */}
                 </h3>
                  <h3 className="tracking-[2%] text-secondaryColor mt-[8px]">Partner With Us: We&#39;re open to brand collaboration, speaker partnerships, and startup support.</h3>
+                
                 <div className="mt-[40px] md:mt-[80px] flex flex-wrap lg:flex-nowrap justify-between gap-[40px]">
-                <div className="rounded-[16px] sm:rounded-[40px] border border-[#17A194] bg-[#B7E2DE] p-[24px] sm:p-[40px] min-h-[459px] sm:min-h-[653px] w-full sm:w-[600px] mx-auto">
+
+                   <div
+                    onMouseEnter={() => setHoverLendVoice(true)}
+                    onMouseLeave={() => setHoverLendVoice(false)}
+                   className={`${!hoverLendVoice ? "bg-[#B7E2DE]" : "shadow-[7px_7px_0px_0px_#64C0B7] bg-primaryGreen text-[#fff]"} min-h-[459px] sm:min-h-[653px] w-full sm:w-[600px] mx-auto cursor-pointer rounded-[16px] sm:rounded-[40px] border border-[#17A194]  p-[24px] sm:p-[40px] `}>
                   <div className="relative w-full h-[213px] sm:h-[373px] rounded-[11px] sm:rounded-[20px] mx-auto">
                     <Image src="/img/build2.png" fill alt="build with thribe community" className="object-center rounded-[20px]" />
                   </div>
                   <div className="mt-[16px] sm:mt-[24px] space-y-[13px] sm:space-y-[24px] text-[#0A1A18]">
-                    <h2 className="font-clash leading-[120%] tracking-[3%] font-[clash} font-[600]">Sponsor a THR!BE member</h2>
-                    <p className="text-[16px] tracking-[2%]">
-                      Help someone learn, grow, and THR!VE. Your support unlocks access to tools, events, and life-changing opportunities. 
-                      Pay it forward
-                    </p>
+                    <h2 className={`font-clash leading-[120%] tracking-[3%] font-[clash} font-[600] ${hoverLendVoice ? "text-[#fff]" : ''}`}>Lend Your Voice</h2>
+                    {!hoverLendVoice ? <p className="tracking-[2%] leading-[150%]">
+                     Add your perspective, share your story, or spark a conversation. Every voice helps shape a tech culture that feels more human.
+                    </p> :  <p className="tracking-[2%] leading-[150%] text-[#fff]">
+                     Help Someone learn, grow and THRIVE. Your support unlock access to tools, events, and life-changing opportunities. Pay it forward.
+                    </p> }
+                    
+                    
         
                     <div>
-                       <button className={`cursor-pointer bg-[#107269] w-[104px] shadow-[4px_4px_0px_0px_#003E39] font-[500] text-[18px] text-[#fff] h-[44px] sm:h-[56px] rounded-[100px]`}>
-                         hello
+                       <button className={`${!hoverLendVoice ? "bg-[#107269] w-[104px] text-[#fff]" : "w-[284px] bg-[#fff]"} transition-all duration-500 ease-in-out shadow-[4px_4px_0px_0px_#003E39] flex justify-center items-center cursor-pointer  font-[500] text-[18px]  h-[44px] sm:h-[56px] rounded-[100px]`}>
+                         {
+                          !hoverLendVoice ? <Image src="/icons/arrow-white.png" width={24} height={24} alt="tech community in Nigeria" className="" /> :
+                          <div className="flex justify-center items-center space-x-[14px] text-primaryGreen">
+                          <div className={`${!hoverLendVoice ? "opacity-0 delay-500":"opacity-100 delay-0"} min-w-[180px] transition-all  duration-500 ease-in-out`}>Start the Conversation</div>
+                            <span className="material-symbols-outlined text-[24px]">Arrow_forward</span>
+                          </div>
+                         } 
                       </button>
+
+                       {/* <button className={`${!hoverLendVoice ? "bg-[#107269] w-[104px] text-[#fff]" : "w-[284px] bg-[#fff]"} transition-all duration-500 ease-in-out text-[#fff] shadow-[4px_4px_0px_0px_#003E39] bg-[#107269] flex justify-center items-center cursor-pointer  font-[500] text-[18px]  h-[44px] sm:h-[56px] rounded-[100px]`}>
+                         {
+                          !hoverJoinTournament ? <Image src="/icons/arrow-white.png" width={24} height={24} alt="tech community in Nigeria" className="" /> :
+                          <div className={`flex justify-center items-center space-x-[14px]`}>
+                            <div className={`${!hoverJoinTournament ? "opacity-0 delay-500":"opacity-100 delay-0"} min-w-[160px] transition-all  duration-500 ease-in-out`}>Rep the Brand</div>
+                            <span className="material-symbols-outlined text-[24px]">Arrow_forward</span>
+                          </div>
+                         } 
+                      </button> */}
                     </div>
                   </div>
-                </div>
+                </div> 
+               
         
-                 <div className="rounded-[16px] sm:rounded-[40px] border border-[#E8CD8A] bg-[#FFF1D0] p-[24px] sm:p-[40px] min-h-full sm:min-h-[653px] w-full sm:w-[600px] mx-auto">
+                 <div
+                  onMouseEnter={() => setHoverJoinTournament(true)}
+                    onMouseLeave={() => setHoverJoinTournament(false)}
+                 className={`${!hoverJoinTournament ? "bg-[#FFF1D0]" : "shadow-[7px_7px_0px_0px_#FBA355] bg-[#E8CD8A] text-[#fff]"} rounded-[16px] sm:rounded-[40px] border border-[#E8CD8A]  p-[24px] sm:p-[40px] min-h-full sm:min-h-[653px] w-full sm:w-[600px] mx-auto`}>
                   <div className="relative  w-full h-[213px] sm:h-[373px] rounded-[20px] mx-auto bg-[#D3D7DA]">
                     <Image src="/img/build3.png" fill alt="build with thribe community" className="object-center rounded-[20px]" />
                   </div>
                   <div className="mt-[16px] sm:mt-[24px] space-y-[13px] sm:space-y-[24px] text-[#0A1A18]">
-                    <h2 className="leading-[120%] tracking-[3%] font-[clash} font-[600]">Buy THR!BE Merch</h2>
-                    <p className="text-[16px] tracking-[2%]">
-                      Rock the vibe, rep the tribe. Every tee, hoodie and sticker fuels the mission. Style your purpose - grab yours now!
+                    <h2 className="leading-[120%] tracking-[3%] font-clash font-[600]">
+                      {!hoverJoinTournament ? "Join The Tournament" : "Rep the Brand"}</h2>
+                    <p className="tracking-[2%] ">
+                      {!hoverJoinTournament ? "Step off the screen and onto the field. Play, cheer, or rep your team/company- because thriving means balance, fun, and community spirit." 
+                          : 
+                    "Wear the spirit of THRIBE everywhere you go. Grab your merch, rep the tribe, and show the world that thriving is more than work - it's a lifestyle."
+                    }
                     </p>
         
                     <div>
-                       <button className={`cursor-pointer bg-[#107269] w-[190px] shadow-[4px_4px_0px_0px_#003E39] font-[500] text-[18px] text-[#fff] h-[44px] sm:h-[56px] rounded-[100px]`}>
-                         Coming soon
+                      <button className={`${!hoverJoinTournament ? " w-[104px]" : "w-[284px]"} transition-all duration-500 ease-in-out text-[#fff] shadow-[4px_4px_0px_0px_#003E39] bg-[#107269] flex justify-center items-center cursor-pointer  font-[500] text-[18px]  h-[44px] sm:h-[56px] rounded-[100px]`}>
+                         {
+                          !hoverJoinTournament ? <Image src="/icons/arrow-white.png" width={24} height={24} alt="tech community in Nigeria" className="" /> :
+                          <div className={`flex justify-center items-center space-x-[14px]`}>
+                            <div className={`${!hoverJoinTournament ? "opacity-0 delay-500":"opacity-100 delay-0"} min-w-[160px] transition-all  duration-500 ease-in-out`}>Rep the Brand</div>
+                            <span className="material-symbols-outlined text-[24px]">Arrow_forward</span>
+                          </div>
+                         } 
                       </button>
                     </div>
                   </div>
