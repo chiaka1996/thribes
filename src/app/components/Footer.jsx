@@ -117,9 +117,8 @@ const Footer = () => {
             </div>
 
             <div className="border border-t-[#DFE2E6] border-b-0 border-l-0 border-r-0 mt-[80px] pt-[80px] hidden md:block">
-                <div className="flex justify-between items-center font-[400] text-[20px] leading-[150%] tracking-[3%] text-secondaryColor">
+                <div className="flex justify-center items-center font-[400] text-[20px] leading-[150%] tracking-[3%] text-secondaryColor">
                     <span>Copyright Ⓒ 2025 THR!BE</span>
-                    <span>By THR!BE Members </span>
                 </div>
             </div>
             </div>
