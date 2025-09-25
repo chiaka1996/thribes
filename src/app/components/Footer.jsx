@@ -73,34 +73,45 @@ const Footer = () => {
                         <Link href="/" className="navLinkFooter md:p-[10px]">Pricing</Link>
                         </span>
                         <span>
-                        <Link href="/" className="navLinkFooter md:p-[10px]">Join the community</Link>
+                        <Link href="#" className="navLinkFooter md:p-[10px]">
+                        Join the community
+                        </Link>
                         </span>
                         
                         
                     </div>
                 </div>
                 <div>
-                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%] md:px-[10px]">SUPPORT</h3>
+                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%] md:px-[10px]">ACTIVITIES</h3>
                     <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
                         <span>
-                        <Link href="#" className="navLinkFooter md:p-[10px]">Buy a merch</Link>
+                        <Link href="#" className="navLinkFooter md:p-[10px]">Lend Your Voice</Link>
                         </span>
                         <span>
-                        <Link href="#" className="navLinkFooter md:p-[10px]">Support a member</Link>
+                        <Link href="#" className="navLinkFooter md:p-[10px]">Shop</Link>
                         </span>
                         <span>
-                        <Link href="#" className="navLinkFooter md:p-[10px]">Partner with us</Link>
+                        <Link href="#" className="md:p-[10px] flex space-x-[10px]">
+                        <span>Join The Tournament</span>
+                         <button className="bg-[#FEF1E6] w-[93px] h-[28px] rounded-[10px] text-[#B15301] text-[12px]">Coming soon</button>
+                        </Link>
                         </span>
                     </div>
                 </div>
                 <div>
-                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%] md:px-[10px]">RESOURCCES</h3>
+                    <h3 className="text-[#6B788E] text-[20px] leading-[150%] tracking-[2%] md:px-[10px]">MEDIA</h3>
                     <div className="mt-[38px] text-[#354764] text-[20px] tracking-[2%] flex flex-col gap-y-[18px]">
                         <span>
-                        <Link href="#" className="navLinkFooter md:p-[10px]">Blog & News</Link>
+                        <Link href="#" className="md:p-[10px] flex items-center space-x-[10px]">
+                        <span>Blog & News</span>
+                         <button className="bg-[#FEF1E6] w-[93px] h-[28px] rounded-[10px] text-[#B15301] text-[12px]">Coming soon</button>
+                        </Link>
                         </span>
                         <span>
-                        <Link href="#" className="navLinkFooter md:p-[10px]">Podcast</Link>
+                        <Link href="#" className="md:p-[10px] flex space-x-[10px]">
+                        <span>Podcast</span>
+                         <button className="bg-[#FEF1E6] w-[93px] h-[28px] rounded-[10px] text-[#B15301] text-[12px]">Coming soon</button>
+                        </Link>
                         </span>
                     </div>
                 </div>
