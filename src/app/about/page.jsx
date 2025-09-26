@@ -1,3 +1,5 @@
+"use client"
+import { useEffect, useRef } from "react";
 import NavigationBar from "../components/navigation2";
 import MobileNavigationBar from "../components/MobileNav";
 import Image from "next/image";
@@ -6,9 +8,30 @@ import Testimaonial from "../components/testimonials";
 import Collaborate from "../components/collaborate";
 import JoinCommunity from "../components/joinCommunity";
 import Footer from "../components/Footer";
+import gsap from "gsap";
 
 
 const About = () => {
+    const contentRef = useRef(null);
+    const tweenRef = useRef(null);
+
+    useEffect(() => {
+        const contentWidth = contentRef.current.scrollWidth / 2;
+
+        tweenRef.current = gsap.to(contentRef.current, {
+            x: -contentWidth,
+            duration: 20,
+            ease: "none",
+            repeat: -1,
+            modifiers: {
+                x: (x) => {
+                const xNum = parseFloat(x);
+                return (xNum % contentWidth) + "px";
+                },
+            },
+            });
+    },[])
+    
 
     return (
         <main className="overflow-x-none">
@@ -103,18 +126,36 @@ const About = () => {
             </section>
 
             <div className="mt-[120px] bg-[#F5F6F7] hidden lg:block">
-            <section className="max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[80px] bg-[#F5F6F7] flex items-center gap-[80px]">
-                <h2 className="leading-[100%] text-[46px] font-clash font-[600] tracking-[3%] text-[#0A1A18] flex space-x-[12px] shrink-0">
-                <span>Our Partners</span>
-                <Image src="/img/relationship.png" width={56} height={56} alt="thribe community" className="object-fit" />
-                </h2>
-                
+            <section className="overflow-x-hidden max-w-[1248px] mx-auto px-[16px] md:px-[20px] xl:px-0 py-[80px] bg-[#F5F6F7] flex flex-col items-center gap-[70px]">
                 <div className="flex justify-between w-full">
-                    <Image src="/img/partner1.png" width={98} height={30} alt="thribe community" className="object-fit" /> 
-                    <Image src="/img/partner3.png" width={131} height={30} alt="thribe community" className="object-fit" /> 
-                    <Image src="/img/partner2.png" width={49} height={32} alt="thribe community" className="object-fit" /> 
-                    <Image src="/img/partner1.png" width={98} height={30} alt="thribe community" className="object-fit" /> 
-                    <Image src="/img/partner3.png" width={131} height={30} alt="thribe community" className="object-fit" /> 
+                <h2 className="leading-[100%] text-[46px] font-clash font-[600] tracking-[3%] text-[#0A1A18] flex space-x-[12px]">
+                <span>Our Partners</span>
+                <Image src="/img/relationship.png" width={56} height={56} alt="thribe community" className="object-fit shrink-0" />
+                </h2>
+
+                <button className="cursor-pointer flex space-x-[24px] w-[260px] h-[56px] rounded-[100px] border border-[#107269] text-[#107269] items-center justify-center">
+                    <span>Partner with Us</span>
+                    <Image src="/icons/line-arrow-right.png" width={24} height={24} alt="tech community in Nigeria" className="object-fit shrink-0" />
+                </button>
+                </div>
+                
+                <div className="flex justify-between w-[3725px] overflow-x-hidden" ref={contentRef} >
+                    <Image src="/img/partner3.png" width={207} height={47} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                    <Image src="/img/partner5.png" width={205} height={47} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                    <Image src="/img/partner2.png" width={74} height={46} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                    <Image src="/img/partner4.png" width={151} height={48} alt="tech community in Nigeria" className="object-fit shrink-0" />
+                    <Image src="/img/partner3.png" width={207} height={47} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                     <Image src="/img/partner5.png" width={205} height={47} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                    <Image src="/img/partner2.png" width={74} height={46} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                    <Image src="/img/partner4.png" width={151} height={48} alt="tech community in Nigeria" className="object-fit shrink-0" />
+                     <Image src="/img/partner3.png" width={207} height={47} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                     <Image src="/img/partner5.png" width={205} height={47} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                    <Image src="/img/partner2.png" width={74} height={46} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                    <Image src="/img/partner4.png" width={151} height={48} alt="tech community in Nigeria" className="object-fit shrink-0" />
+                    <Image src="/img/partner3.png" width={207} height={47} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                     <Image src="/img/partner5.png" width={205} height={47} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                    <Image src="/img/partner2.png" width={74} height={46} alt="tech community in Nigeria" className="object-fit shrink-0" /> 
+                    <Image src="/img/partner4.png" width={151} height={48} alt="tech community in Nigeria" className="object-fit shrink-0" />
 
                 </div>
             </section>
