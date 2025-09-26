@@ -16,7 +16,7 @@ const About = () => {
     const tweenRef = useRef(null);
 
     useEffect(() => {
-        const contentWidth = contentRef.current.scrollWidth / 2;
+        const contentWidth = contentRef.current.scrollWidth / 3;
 
         tweenRef.current = gsap.to(contentRef.current, {
             x: -contentWidth,
