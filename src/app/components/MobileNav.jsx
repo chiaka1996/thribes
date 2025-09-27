@@ -1,4 +1,5 @@
 "use client"
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
@@ -7,7 +8,21 @@ import { usePathname } from "next/navigation";
 
 const MobileNavigationBar = () => {
     const {toggleNavbar, toggleMobileNavbarFunction} = useAllContext();
+    const [toggleEventSubLinks, setToggleEventSubLinks] = useState(true)
+    const [toggleMediaSubLinks, setToggleMediaSubLinks] = useState(true)
     const pathname = usePathname();
+
+    const eventFunction = () => {
+        setToggleMediaSubLinks(true);
+        setToggleEventSubLinks((prev) => !prev)
+    }
+
+    const mediaFunction = () => {
+        setToggleEventSubLinks(true)
+        setToggleMediaSubLinks((prev) => !prev)
+    }
+
+
     
     return(
         <div className={`z-50 w-full px-[16px] md:px-[20px] py-[24px] fixed top-0 left-0 w-full h-[100vh] bg-[#fff] ${!toggleNavbar ? "hidden" : ''}`}>
@@ -27,15 +42,52 @@ const MobileNavigationBar = () => {
 
         </nav>
 
-            <ul className="text-[16px] text-[#354764] tracking-[2%] space-y-[40px] py-[40px] w-full font-[600]">
-                <li><Link href="/" className={pathname==="/" ? "text-[#087C72]" : ""}>Home</Link></li>
-                <li> <Link href="/about" className={pathname==="/about" ? "text-[#087C72]" : ""}>About</Link></li>
-                <li> <Link href="/events" className={pathname==="/events" ? "text-[#087C72]" : ""}>Events</Link></li>
-                <li> <Link href="/blog" className={pathname==="/blog" ? "text-[#087C72]" : ""}>Blog & News</Link></li>
-                 <li className="flex gap-x-[10px] items-center"> 
-                    <Link href="#">Podcast</Link>
-                    <button className="w-[112px] h-[32px] bg-[#FEF1E6] rounded-[16px] py-[4px] px-[8px] text-[16px] leading-[150%] tracking-[2%] text-[#B15301]">Coming Soon</button>
-                </li>
+            <ul className="text-[16px] text-[#354764] tracking-[2%] space-y-[40px] py-[40px] w-full ">
+                <li><Link href="/" className={pathname==="/" ? "text-[#087C72] font-[600]" : ""}>Home</Link></li>
+                <li> <Link href="/about" className={pathname==="/about" ? "text-[#087C72] font-[600]" : ""}>About</Link></li>
+
+                <div>
+                <Link href="#" className={` ${pathname==="/events" ? "text-[#087C72] font-[600]" : ""} flex justify-between items-center`} onClick={eventFunction}>
+                    <span>Events</span>
+                     <span className="material-symbols-outlined text-[16px] ">
+                        keyboard_arrow_down
+                    </span>
+                </Link>
+                <div className={` ${toggleEventSubLinks ? "hidden" : "block"} transition-all ease-in px-[10px] space-y-[24px] mt-[24px] `}>
+                    <li> <Link href="/events" className={pathname==="/events" ? "text-[#087C72] font-[600]" : ""}>Tech Events</Link></li>
+                        <Link href="#" className="flex space-x-[10px]">
+                         <span>Football tournament</span>
+                         <button className="bg-[#FEF1E6] w-[93px] h-[28px] rounded-[10px] text-[#B15301] text-[12px]">Coming soon</button>
+                        </Link>
+                         <Link href="#" className="flex space-x-[10px]">
+                         <span>Outdoor fun</span>
+                         <button className="bg-[#FEF1E6] w-[93px] h-[28px] rounded-[10px] text-[#B15301] text-[12px]">Coming soon</button>
+                        </Link>
+                </div>
+                </div>
+
+                <div>
+                <Link href="#" className={`${pathname==="/blog" ? "text-[#087C72] font-[600]" : ""} flex justify-between items-center`} onClick={mediaFunction}>
+                    <span>Media</span>
+                     <span className="material-symbols-outlined text-[16px] ">
+                        keyboard_arrow_down
+                    </span>
+                </Link>
+
+                <div className={` ${toggleMediaSubLinks ? "hidden" : "block"} transition-all ease-in px-[10px] space-y-[24px] mt-[24px] `}>
+                        <Link href="#" className="flex space-x-[10px]">
+                         <span>Blog & News</span>
+                         <button className="bg-[#FEF1E6] w-[93px] h-[28px] rounded-[10px] text-[#B15301] text-[12px]">Coming soon</button>
+                        </Link>
+                         <Link href="#" className="flex space-x-[10px]">
+                         <span>Podcasts</span>
+                         <button className="bg-[#FEF1E6] w-[93px] h-[28px] rounded-[10px] text-[#B15301] text-[12px]">Coming soon</button>
+                        </Link>
+                </div>
+                </div>
+
+
+                <li> <Link href="#" className={pathname==="/blog" ? "text-[#087C72]" : ""}>Shop</Link></li>
                 <Button name="Join Us" classname="w-[141px] h-[56px] bg-[#107269]"/>
             </ul>
     
