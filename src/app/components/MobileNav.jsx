@@ -43,8 +43,8 @@ const MobileNavigationBar = () => {
         </nav>
 
             <ul className="text-[16px] text-[#354764] tracking-[2%] space-y-[40px] py-[40px] w-full ">
-                <li><Link href="/" className={pathname==="/" ? "text-[#087C72] font-[600]" : ""}>Home</Link></li>
-                <li> <Link href="/about" className={pathname==="/about" ? "text-[#087C72] font-[600]" : ""}>About</Link></li>
+                <li><Link onClick={toggleMobileNavbarFunction} href="/" className={pathname==="/" ? "text-[#087C72] font-[600]" : ""}>Home</Link></li>
+                <li> <Link onClick={toggleMobileNavbarFunction} href="/about" className={pathname==="/about" ? "text-[#087C72] font-[600]" : ""}>About</Link></li>
 
                 <div>
                 <Link href="#" className={` ${pathname==="/events" ? "text-[#087C72] font-[600]" : ""} flex justify-between items-center`} onClick={eventFunction}>
@@ -54,7 +54,7 @@ const MobileNavigationBar = () => {
                     </span>
                 </Link>
                 <div className={` ${toggleEventSubLinks ? "hidden" : "block"} transition-all ease-in px-[10px] space-y-[24px] mt-[24px] `}>
-                    <li> <Link href="/events" className={pathname==="/events" ? "text-[#087C72] font-[600]" : ""}>Tech Events</Link></li>
+                    <li> <Link onClick={toggleMobileNavbarFunction} href="/events" className={pathname==="/events" ? "text-[#087C72] font-[600]" : ""}>Tech Events</Link></li>
                         <Link href="#" className="flex space-x-[10px]">
                          <span>Football tournament</span>
                          <button className="bg-[#FEF1E6] w-[93px] h-[28px] rounded-[10px] text-[#B15301] text-[12px]">Coming soon</button>
