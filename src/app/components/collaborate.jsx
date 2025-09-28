@@ -5,16 +5,34 @@ import { useAllContext } from "../context/allcontext";
 
 const Collaborate = () => {
   const {toggleLendYourVoiceThribeModal, toggleJoinTournamentModal} = useAllContext()
+   const intervalRef = useRef(null);
+   const jerseyIntervalRef = useRef(null);
   const [hoverLendVoice, setHoverLendVoice] = useState(false);
   const [hoverJoinTournament, setHoverJoinTournament] = useState(false);
-  const animationImages = ["/img/tote1.png",  
-                          "/img/tote2.png", 
-                          "https://res.cloudinary.com/chiaka/image/upload/v1759018554/Property_1_Stickers_Packaging_ffaa1y.png",
-                          "https://res.cloudinary.com/chiaka/image/upload/v1759018553/Property_1_Component_64_yq1t1a.png",  
-                          ];
+  const [hoverJerseyContainer, setHoverJerseyContainer] = useState(false)
+  const [activeJerseyImage, setActiveJerseyImage] = useState(0)
   const [currentImg, setCurrentImg] = useState(0);
+  const animationImages = ["/img/tote1.png",  
+          "/img/tote2.png", 
+          "https://res.cloudinary.com/chiaka/image/upload/v1759018554/Property_1_Stickers_Packaging_ffaa1y.png",
+          "https://res.cloudinary.com/chiaka/image/upload/v1759018553/Property_1_Component_64_yq1t1a.png",  
+          ];
 
-  const intervalRef = useRef(null);
+  const jerseyImages = ["https://res.cloudinary.com/chiaka/image/upload/v1759018514/shirt_ih6qka.png","https://res.cloudinary.com/chiaka/image/upload/v1759022875/Property_1_Component_128_so16jm.png"]
+
+   useEffect(() => {
+    if (hoverJerseyContainer) {
+      jerseyIntervalRef.current = setInterval(() => {
+        setActiveJerseyImage((prev) => (prev === 0 ? 1 : 0));
+      }, 1000); // switch every 4s
+    } else {
+      clearInterval(jerseyIntervalRef.current);
+      intervalRef.current = null;
+       setActiveJerseyImage(0); // reset to first image when not hovered
+    }
+
+    return () => clearInterval(jerseyIntervalRef.current);
+  }, [hoverJerseyContainer]);
 
   const startInterval = () => {
     if (intervalRef.current) return; // prevent multiple intervals
@@ -224,12 +242,27 @@ const Collaborate = () => {
         </div>
 
         {/* comming soon */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-[24px] mt-[48px] border border-[#FCC08B] bg-[#FEF1E6] rounded-[40px] p-[24px] sm:p-[40px] w-full">
-          <div className="relative rounded-[20px] w-full sm:w-[520px] h-[213px] sm:h-[373px] bg-[#693101]">
-            <Image src="https://res.cloudinary.com/chiaka/image/upload/v1758798676/tournament_sdfcge.png" fill alt="tech community in Nigeria" className="object-fill rounded-[20px]" />
-          </div>
+        <div 
+         onMouseEnter={() => setHoverJerseyContainer(true)}
+         onMouseLeave={() => setHoverJerseyContainer(false)}
+        className={`flex flex-col md:flex-row items-center justify-between gap-[24px] mt-[48px] ${!hoverJerseyContainer ? "border border-[#FCC08B] bg-[#FEF1E6] text-primaryTextColor" : "text-[#EBEDF0] border border-t-0 border-l-0 border-b-[6px] border-r-[6px] border-[#F97502] bg-[#693101]"}  rounded-[40px] p-[24px] sm:p-[40px] w-full`}>
+            {!hoverJerseyContainer ? <div className="relative w-full sm:w-[520px] h-[213px] sm:h-[373px] rounded-[20px] overflow-hidden">
+              <Image src="https://res.cloudinary.com/chiaka/image/upload/v1758798676/tournament_sdfcge.png" fill alt="tech community in Nigeria" className="object-cover" />
+            </div>:     
+            <div className="relative w-full sm:w-[520px] h-[213px] sm:h-[373px] rounded-[20px] overflow-hidden">
+        {jerseyImages.map((src, i) => (
+          <div
+            key={i}
+            className={`absolute inset-0 bg-center bg-cover transition-opacity duration-1000 ease-in-out rounded-[20px] ${
+              activeJerseyImage === i ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${src})` }}
+          />
+        ))}
+      </div>
+       }
           <div className="w-full md:w-[620px] space-y-[14px] sm:space-y-[24px]">
-            <h1 className="text-[#0A1A18] font-[600] font-clash leading-[120%] tracking-[3%]">Join the Tournamnet</h1>
+            <h1 className="font-[600] font-clash leading-[120%] tracking-[3%]">Join the Tournamnet</h1>
             <div className="">
               Step off the screen and onto the field. Play, cheer, or rep your team/company because thriving means balance, fun, and 
               community spirit.
@@ -240,7 +273,7 @@ const Collaborate = () => {
               </p>
             </div>
 
-            <button className="cursor-pointer rounded-[100px] w-[164px] sm:w-[190px] h-[47px] sm:h-[56px] border border-[#F97502] px-[29px] sm:px-[40px] font-[500] text-[18px] text-[#F97502] leading-[150%] tracking-[3%]">
+            <button className={`cursor-pointer rounded-[100px] w-[164px] sm:w-[190px] h-[47px] sm:h-[56px] ${!hoverJerseyContainer ? "border border-[#F97502] text-[#F97502]" : "border border-[#FFFFFF] text-[#FFFFFF]"}  px-[29px] sm:px-[40px] font-[500] text-[18px]  leading-[150%] tracking-[3%]`}>
               Coming soon
             </button>
 
