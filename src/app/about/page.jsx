@@ -177,7 +177,7 @@ const About = () => {
             <div className="mt-[24px] sm:mt-[80px] flex justify-between flex-wrap gap-y-[24px] lg:gap-y-[40px] xl:gap-y-0">
              <TeamCard 
               classname="bg-[#E8F6F4]"
-              classnameHover= "bg-primaryGreen"
+              classnameHover= "bg-[#0A443E]"
               hoverText="Designer. Dreamer. Spark plug. Keeps the heart of thribe alivee with direction, creativity, and intentional chaos."
               name="Thanau Abbas"
               nickname="AKA Sultana"
@@ -186,7 +186,7 @@ const About = () => {
             />
              <TeamCard 
                 classname="bg-[#FEF1E6]" 
-                classnameHover= "bg-primaryGreen"
+                classnameHover= "bg-[#693101]"
                 hoverText="Product manager. The clarity architect, mindset shifter and growth partner who helps us grow with intention and win with their values intact."
                 name="Jesse Croffie" 
                 nickname="AKA Khing"  
@@ -195,7 +195,7 @@ const About = () => {
             />
             <TeamCard 
             classname="bg-[#FFF6DF]" 
-            classnameHover= "bg-primaryGreen"
+            classnameHover= "bg-[#6B5F40]"
             hoverText="Product manager. The keeper of peace and pulse. He ensures safety, kindness and empathy stay at the core of all we do."
             name="Mubarak Shittu" 
             nickname="AKA M.O Shittu" 
@@ -204,7 +204,7 @@ const About = () => {
             />
             <TeamCard 
             classname="bg-[#DFE2E6]" 
-            classnameHover= "bg-primaryGreen"
+            classnameHover= "bg-[#15294B]"
             hoverText="Quality Assurance engineer. The Community Vibes Curator. Keeps THRIBE warm, safe, respectful and alive. The heart of the tribe"
             name="Kehinde Qudus" 
             nickname="AKA KQ"  

@@ -7,7 +7,11 @@ const Collaborate = () => {
   const {toggleLendYourVoiceThribeModal, toggleJoinTournamentModal} = useAllContext()
   const [hoverLendVoice, setHoverLendVoice] = useState(false);
   const [hoverJoinTournament, setHoverJoinTournament] = useState(false);
-  const animationImages = ["/img/tote1.png", "/img/tote2.png", "/img/join1.png"];
+  const animationImages = ["/img/tote1.png",  
+                          "/img/tote2.png", 
+                          "https://res.cloudinary.com/chiaka/image/upload/v1759018554/Property_1_Stickers_Packaging_ffaa1y.png",
+                          "https://res.cloudinary.com/chiaka/image/upload/v1759018553/Property_1_Component_64_yq1t1a.png",  
+                          ];
   const [currentImg, setCurrentImg] = useState(0);
 
   const intervalRef = useRef(null);
@@ -67,12 +71,17 @@ const Collaborate = () => {
             } min-h-[459px] sm:min-h-[653px] w-full sm:w-[600px] mx-auto cursor-pointer rounded-[16px] sm:rounded-[40px] border border-[#17A194]  p-[24px] sm:p-[40px] `}
           >
             <div className="relative w-full h-[213px] sm:h-[373px] rounded-[11px] sm:rounded-[20px] mx-auto">
-              <Image
-                src="/img/build2.png"
+             {!hoverLendVoice ? <Image
+                src="https://res.cloudinary.com/chiaka/image/upload/v1759018854/8AB6934A-95F6-4001-BEF2-A717D6879770_hdyvtd.png"
                 fill
                 alt="build with thribe community"
-                className="object-center rounded-[20px]"
-              />
+                className="object-cover rounded-[20px]"
+              /> :  <Image
+                src="https://res.cloudinary.com/chiaka/image/upload/v1759018853/552F5143-0D49-4536-93FC-5CA6E8520604_1_snuv8v.png"
+                fill
+                alt="build with thribe community"
+                className="object-cover rounded-[20px]"
+              /> } 
             </div>
             <div className="mt-[16px] sm:mt-[24px] space-y-[13px] sm:space-y-[24px] text-[#0A1A18]">
               <h2
@@ -142,7 +151,7 @@ const Collaborate = () => {
             className={`${
               !hoverJoinTournament
                 ? "bg-[#FFF1D0]"
-                : "shadow-[7px_7px_0px_0px_#FBA355] bg-[#E8CD8A] text-[#fff]"
+                : "shadow-[7px_7px_0px_0px_#F97502] bg-[#FFE198] text-[#fff]"
             } cursor-pointer rounded-[16px] sm:rounded-[40px] border border-[#E8CD8A]  p-[24px] sm:p-[40px] min-h-full sm:min-h-[653px] w-full sm:w-[600px] mx-auto`}
           >
             <div
